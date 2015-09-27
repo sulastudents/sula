@@ -1,0 +1,154 @@
+
+<template name="sulaVendors">
+	<div class="">
+		<a class='dropdown-button' href='' data-activates='dropdown1'>
+			{{#if currentUser}}
+			<span class="dashboard">
+				{{currentUser.username}}
+			</span>
+			{{else}}
+			<span>
+				Vendors
+			</span>
+			{{/if}}
+		</a>
+
+		<ul id='dropdown1' class='dropdown-content'>
+			{{#if currentUser}}
+			<li><a href="" class="sign-out">Sign Out</a></li>
+			<li><a href="{{pathFor 'vendors'}}" id="navbarDashboard">Dashboard</a></li>
+			{{else}}
+			<li data-toggle="" class="" data-target="">
+				<!-- <a class="waves-effect waves-light btn modal-trigger" href="#logInModal">Sign In</a> -->
+				<a class="" href="" id="launchSignInModal">Sign In</a>
+				<!-- <a href="#register" class="modal-trigger" id="">Register</a> -->
+
+				<!-- <a href="#logInModal" class="" id="navbarSignIn">Sign In</a> -->
+			</li>
+			<li class="" data-target=""><a href="" class="" id="launchRegisterModal">Register</a></li>
+			{{/if}}
+			<li><a href="{{pathFor 'about'}}" id="">About Us</a></li>
+		</ul>
+
+	</div>
+
+
+
+<!-- <div id="logInModal" class="modal">
+	<div class="modal-content">
+		<h4>Sign In</h4>
+		<p>
+			<form class="form-horizontal sign-in-form">
+				<div class="form-group">
+			    	<label for="signInName" class="col-sm-2 control-label">Business Name:</label>
+			    	<div class="col-sm-10">
+			      		<input type="text" name="name" class="form-control" id="signInName" placeholder="Name">
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="signInPassword" class="col-sm-2 control-label">Password:</label>
+			    	<div class="col-sm-10">
+			      		<input type="password" class="form-control" id="signInPassword" placeholder="Password">
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-primary sign-in">Sign in</button>
+			      <button type="button" class="btn btn-success go-to-register">Register</button>
+			    </div>
+			  </div>
+			</form>
+		</p>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+	</div>
+</div> -->
+
+
+</template>
+
+
+<template name="signOut">
+	<h3>{{currentUser.username}} You are signed in. <button class="sign-out btn btn-danger">Sign Out</button></h3>
+</template>
+
+<!-- <template name="signIn">
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Log In</h3>
+			<form class="form-horizontal sign-in-form">
+				<div class="form-group">
+			    	<label for="signInName" class="col-sm-2 control-label">Business Name:</label>
+			    	<div class="col-sm-10">
+			      		<input type="text" name="name" class="form-control" id="signInName" placeholder="Name">
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="signInPassword" class="col-sm-2 control-label">Password:</label>
+			    	<div class="col-sm-10">
+			      		<input type="password" class="form-control" id="signInPassword" placeholder="Password">
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-primary sign-in">Sign in</button>
+			      <button type="button" class="btn btn-success go-to-register">Register</button>
+			    </div>
+			  </div>
+			</form> -->
+			<!-- {{> recovery}} -->
+		<!-- </div>
+	</div>
+</template> -->
+
+<template name="register">
+	<div class="row">
+		<div class="col-md-12">
+			<form class="form-horizontal register-form">
+			  	<div class="form-group">
+			    	<label for="registerName" class="col-sm-2 control-label">Business Name:</label>
+			    	<div class="col-sm-10">
+			      		<input type="text" name="name" class="form-control" id="registerName" placeholder="Name">
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="registerPassword" class="col-sm-2 control-label">Create Password:</label>
+			    	<div class="col-sm-10">
+			      		<input type="password" class="form-control" id="registerPassword" placeholder="Password">
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="registerConfirmPassword" class="col-sm-2 control-label">Confirm Password:</label>
+			    	<div class="col-sm-10">
+			      		<input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirm Password">
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="registerNumber" class="col-sm-2 control-label">Contact Number:</label>
+			    	<div class="col-sm-10">
+			      		<input type="text" name="number" class="form-control" id="registerNumber" placeholder="Contact Number">
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="registerEmail" class="col-sm-2 control-label">Email Address:</label>
+			    	<div class="col-sm-10">
+			      		<input type="email" name="email" class="form-control" id="registerEmail" placeholder="Email">
+			    	</div>
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="registerDescription" class="col-sm-2 control-label">About your Business:</label>
+			    	<div class="col-sm-10">
+			      		<textarea class="form-control" id="registerDescription" rows="3"></textarea>
+			    	</div>
+			  	</div>
+
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-primary register">Register</button>
+			    </div>
+			  </div>
+			</form>
+		</div>
+	</div>
+</template>

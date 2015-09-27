@@ -1,0 +1,142 @@
+<template name="newDiscount">
+	<!-- {{> navbar}} -->
+
+	<div class="container">
+
+		<div class="col m8 offset-m2">
+			<h3 align="center">List your Discount!</h3>
+			<form class="form-horizontal" id="newOffer">
+
+				<div class="col m10 offset-m2">
+					<img src="" id="preview" class="img-rounded holder" alt="">
+					<div style="display:none;">
+						<input type="file" id="fileInput">
+					</div>
+					<hr>
+				</div>
+
+
+				<!-- <div class="input-field">
+				<label for="title" class="col s2 control-label">Title</label>
+					<div class="col s10 input-group">
+						<input type="text" name="title" class="form-control" id="title" placeholder="Cheap Furniture for all Students">
+					</div>
+				</div> -->
+
+
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="title" type="text" name="title" class="validate">
+						<label for="title">Title</label>
+					</div>
+				</div>
+
+
+
+				<!-- <div class="input-field">
+					<label for="discount" class="col s2 control-label">Discount</label>
+					<div class="col s10 input-group">
+						<input type="number" name="discount" class="form-control" id="discount" placeholder="25">
+						<div class="input-group-addon">% off</div>
+					</div>
+				</div> -->
+
+
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="discount" type="number" name="discount" class="validate">
+						<label for="discount">Discount</label>
+					</div>
+				</div>
+
+
+
+
+				<!-- <div class="input-field">
+				<label for="location" class="col s2 control-label">Location</label>
+					<div class="col s10 input-group">
+						<input type="text" name="location" class="form-control" id="location" placeholder="Masaki, Dar Es Salaam">
+					</div>
+				</div> -->
+
+
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="location" type="text" name="location" class="validate">
+						<label for="location">Location</label>
+					</div>
+				</div>
+
+
+
+
+
+
+				<!-- <div class="input-field">
+					<label for="category" class="col s2 control-label">Category</label>
+					<div class="" id="category">
+						<select class="category" name="category" id="categoryList">
+						  <option value="shopping">Shopping</option>
+						  <option value="entertainment">Entertainment</option>
+						  <option value="foodNDrinks">Food & Drink</option>
+						  <option value="services">Services</option>
+						  <option value="study">Study</option>
+						  <option value="other">Other</option>
+						</select>
+						<br>
+				   	</div>
+				</div> -->
+
+
+
+				<div class="input-field col s12">
+					<select class="category" name="category" id="categoryList">
+						<!-- <option value="" disabled selected>Choose your Category</option> -->
+						<option value="shopping" selected>Shopping</option>
+						<option value="entertainment">Entertainment</option>
+						<option value="foodNDrinks">Food & Drink</option>
+						<option value="services">Services</option>
+						<option value="study">Study</option>
+					</select>
+					<label>Category</label>
+				</div>
+
+
+
+
+
+
+
+
+
+
+				<!-- <div class="input-field">
+				<label for="description" class="col s2 control-label">Description</label>
+					<div class="col s10 input-group">
+						<textarea class="form-control" name="description" rows="3" id="description" placeholder="Offer Description"></textarea>
+					</div>
+				</div> -->
+
+
+
+				<div class="row">
+					<div class="input-field col s12">
+						<textarea id="description" class="materialize-textarea" name="description" length="120"></textarea>
+						<label for="description">Description</label>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="input-field">
+					<div class="col offset-s2 col s10">
+						<button type="submit" class="btn btn-default">Post Offer!</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</template>

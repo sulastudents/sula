@@ -1,0 +1,18 @@
+<template name="other">
+	<!-- {{> navbar}} -->
+	<div class="container">
+	{{> information}}
+		<br>
+		<br>
+		<h3>Other</h3>
+
+		{{> modal}}
+
+		<div class="row">
+		{{#each offer}}
+			{{> thumb}}
+		{{/each}}
+		</div>
+
+	</div>
+</template>

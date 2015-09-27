@@ -1,0 +1,117 @@
+<template name="discounts">
+	<!-- {{> navbar}} -->
+
+	<div class="container">
+		{{> vendorsInfo}}
+		<br>
+		<br>
+
+		{{#unless currentUser}}
+		<div align="center">
+			<h3>Please <a href="" id="vendorSignIn">Sign in</a> or <a id="vendorRegister" href="">Register</a> to become a partner</h3>
+		</div>
+		{{else}}
+		<div>
+			<!-- <h2 class="inline" id="userDash">{{currentUser.username}}'s Dashboard</h2> -->
+			<div class="row">
+				<a href="{{pathFor 'newDiscount'}}" align="right" class="">
+					<h5 class="inline">New Discount </h5>
+				</a>
+			</div>
+			<!-- <a href="{{pathFor 'discounts'}}" class="pull-right"><h3 class="inline">myDiscounts <span class="badge">{{discountCount}}</span></h3></a> -->
+			<hr>
+			<div class="col-md-12">
+
+
+				{{#each discountList}}
+				<ul class="collection">
+					{{> discount}}
+				</ul>
+				{{/each}}
+
+
+
+				<!-- <div class="panel panel-default">
+					<div class="panel-body">
+						<div class="media">
+							<div class="media-left">
+								<a href="#">
+								<img class="media-object" width="100px" height="100px" src="http://newsletter.dole.com/assets/20090526-localflavor-450.jpg" alt="...">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Media heading</h4>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam eaque quos, harum vitae dignissimos possimus eveniet earum numquam commodi similique eius ducimus quo unde asperiores repellat quod autem et, voluptatem!
+								<div class="pull-right">
+									<a href="">
+										<button type="button" id="edit" class="btn btn-info">
+											<span class="glyphicon glyphicon-wrench"></span>
+										</button>
+									</a>
+									&nbsp;
+									<button type="button" id="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+				<!-- <div class="panel panel-default">
+					<div class="panel-body">
+						<div class="media">
+							<div class="media-left">
+								<a href="#">
+								<img class="media-object" width="100px" height="100px" src="http://newsletter.dole.com/assets/20090526-localflavor-450.jpg" alt="...">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Media heading</h4>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam eaque quos, harum vitae dignissimos possimus eveniet earum numquam commodi similique eius ducimus quo unde asperiores repellat quod autem et, voluptatem!
+								<div class="pull-right">
+									<a href="">
+										<button type="button" id="edit" class="btn btn-info">
+											<span class="glyphicon glyphicon-wrench"></span>
+										</button>
+									</a>
+									&nbsp;
+									<button type="button" id="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="panel panel-default">
+					<div class="panel-body">
+						<div class="media">
+							<div class="media-left">
+								<a href="#">
+								<img class="media-object" width="100px" height="100px" src="http://newsletter.dole.com/assets/20090526-localflavor-450.jpg" alt="...">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Media heading</h4>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam eaque quos, harum vitae dignissimos possimus eveniet earum numquam commodi similique eius ducimus quo unde asperiores repellat quod autem et, voluptatem!
+								<div class="pull-right">
+									<a href="">
+										<button type="button" id="edit" class="btn btn-info">
+											<span class="glyphicon glyphicon-wrench"></span>
+										</button>
+									</a>
+									&nbsp;
+									<button type="button" id="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+
+
+			</div>
+
+		</div>
+		{{/unless}}
+	</div>
+
+
+</template>

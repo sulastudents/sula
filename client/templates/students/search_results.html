@@ -1,0 +1,18 @@
+<template name="results">
+	<!-- {{> navbar}} -->
+	<div class="container">
+	{{> information}}
+		<br>
+		<br>
+		<h3>Search: <small>{{searched}}</small></h3>
+
+		{{> modal}}
+
+		<div class="row">
+		{{#each offer}}
+			{{> thumb}}
+		{{/each}}
+		</div>
+
+	</div>
+</template>

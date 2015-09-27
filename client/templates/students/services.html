@@ -1,0 +1,18 @@
+<template name="services">
+	<!-- {{> navbar}} -->
+	<div class="container">
+	{{> information}}
+		<br>
+		<br>
+		<h3>Services</h3>
+
+		{{> modal}}
+
+		<div class="row">
+		{{#each offer}}
+			{{> thumb}}
+		{{/each}}
+		</div>
+
+	</div>
+</template>

@@ -1,0 +1,91 @@
+<template name="layout">
+	{{> navbar}}
+	<div id="yield">
+		{{> yield}}
+	</div>
+	{{> footer}}
+
+	<div id="logInModal" class="modal modal-fixed-footer">
+		<form class="col s12 sign-in-form">
+			<div class="modal-content">
+				<h4 align="center">Sign In</h4>
+				<p>
+					<div class="row">
+						<!-- <form class="col s12 sign-in-form"> -->
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="signInName" type="text" class="validate">
+								<label for="signInName">Business Name:</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="signInPassword" type="password" class="validate">
+								<label for="signInPassword">Password</label>
+							</div>
+						</div>
+						<!-- </form> -->
+					</div>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn waves-effect waves-light sign-in">
+					Sign in
+				</button>
+				<button type="button" class="btn waves-effect waves-light go-to-register">
+					Register
+				</button>
+				<!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a> -->
+			</div>
+		</form>
+	</div>
+
+	<div id="register" class="modal modal-fixed-footer">
+		<form class="register-form">
+			<div class="modal-content">
+				<h4 align="center">Register</h4>
+				<div class="row">
+					<!-- <form class="register-form"> -->
+					<div class="input-field col s12">
+						<i class="mdi mdi-account-circle prefix"></i>
+						<input id="registerName" type="text" class="validate">
+						<label for="registerName">Business Name</label>
+					</div>
+					<div class="input-field col s12">
+						<i class="mdi mdi-lock prefix"></i>
+						<input id="registerPassword" type="password" class="validate">
+						<label for="registerPassword">Create password</label>
+					</div>
+					<div class="input-field col s12">
+						<i class="mdi mdi-lock prefix"></i>
+						<input id="registerConfirmPassword" type="text" class="validate">
+						<label for="registerConfirmPassword">Confirm password</label>
+					</div>
+					<div class="input-field col s12">
+						<i class="mdi mdi-phone prefix"></i>
+						<input id="registerNumber" type="number" class="validate">
+						<label for="registerNumber">Telephone</label>
+					</div>
+					<div class="input-field col s12">
+						<i class="mdi mdi-at prefix"></i>
+						<input id="registerEmail" type="email" class="validate">
+						<label for="registerEmail">Email Address</label>
+					</div>
+					<div class="input-field col s12">
+						<i class="mdi mdi-pencil prefix"></i>
+						<textarea id="registerDescription" class="materialize-textarea" length="120"></textarea>
+						<label for="registerDescription">About your Business</label>
+					</div>
+					<!-- </form> -->
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn waves-effect waves-light" type="submit" name="action">Register
+					<i class="mdi mdi-lock-open-outline"></i>
+				</button>
+				<!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn  register">Register</a> -->
+			</div>
+		</form>
+	</div>
+
+</template>

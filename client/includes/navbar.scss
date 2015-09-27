@@ -1,0 +1,13 @@
+#logo {
+    width: 65px;
+}
+#sideNavLogo img {
+    width: 200px;
+    margin-top: 5px;
+}
+
+@media (max-width: 690px) {
+    #logo {
+        width: 55px;
+    }
+}

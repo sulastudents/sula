@@ -1,0 +1,11 @@
+.font_17 {
+    font-size: 17px;
+}
+
+.styledLists {
+    & > li {
+        list-style-type: square;
+        list-style-position: inside;
+        margin-left: 20px;
+    }
+}

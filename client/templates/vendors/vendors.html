@@ -1,0 +1,21 @@
+<template name="vendors">
+	<!-- {{> navbar}} -->
+
+	<div class="container">
+		{{> vendorsInfo}}
+		<br>
+		<br>
+
+		{{#unless currentUser}}
+		<div align="center">
+			<h3>Please <a href="" id="vendorSignIn">Sign in</a> or <a id="vendorRegister" href="">Register</a> to become a partner</h3>
+		</div>
+		{{else}}
+		<div>
+			{{> dashboard}}
+		</div>
+		{{/unless}}
+	</div>
+
+
+</template>

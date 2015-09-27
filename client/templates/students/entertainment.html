@@ -1,0 +1,17 @@
+<template name="entertainment">
+	<!-- {{> navbar}} -->
+	<div class="container">
+	{{> information}}
+		<br>
+		<br>
+		<h3>Entertainment</h3>
+
+		{{> modal}}
+
+		<div class="row">
+		{{#each offer}}
+			{{> thumb}}
+		{{/each}}
+		</div>
+	</div>
+</template>

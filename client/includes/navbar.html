@@ -1,0 +1,128 @@
+<template name="navbar">
+	<div class="navbar-fixed">
+		<nav class="sula-blue">
+			<div class="nav-wrapper">
+				<a href="{{pathFor 'students'}}" class="brand-logo">
+					<img class="responsive-img" id="logo" src="/resources/sula_logo_official.png" alt="Sula Students">
+				</a>
+				<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="zmdi zmdi-menu"></i></a>
+				<ul class="right hide-on-med-and-down">
+					<li class="hoverable students deals"><a class="deals" href="{{pathFor 'students'}}">DEALS!</a></li>
+					<li class="hoverable students entertainment"><a class="entertainment" href="{{pathFor 'students'}}">Entertainment</a></li>
+					<li class="hoverable students shopping"><a class="shopping">Shopping</a></li>
+					<li class="hoverable students food-n-drinks"><a class="food-n-drinks" href="{{pathFor 'students'}}">Food & Drink</a></li>
+					<li class="hoverable students study"><a class="study" href="{{pathFor 'students'}}">Study</a></li>
+					<li class="hoverable students services"><a class="services" href="{{pathFor 'students'}}">Services</a></li>
+					<li class="hoverable" id="accountsPortal"><a>{{> sulaVendors}}</a></li>
+					<li class="">{{>sulaSearch}}</li>
+				</ul>
+				<ul class="side-nav" id="mobile-nav">
+					<li id="sideNavLogo" align="center"><img src="/resources/sula_logo_official.png" alt="Sula Students"></li>
+					<li class="divider"></li>
+					<li><a class="sideNavItem deals" href="{{pathFor 'students'}}">Deals!</a></li>
+					<li><a class="sideNavItem entertainment" href="{{pathFor 'entertainment'}}">Entertainment</a></li>
+					<li><a class="sideNavItem shopping" href="{{pathFor 'shopping'}}">Shopping</a></li>
+					<li><a class="sideNavItem food-n-drinks" href="{{pathFor 'foodNDrinks'}}">Food & Drink</a></li>
+					<li><a class="sideNavItem study" href="{{pathFor 'study'}}">Study</a></li>
+					<li><a class="sideNavItem services" href="{{pathFor 'services'}}">Services</a></li>
+					<li id="accountsPortal"><a class="sideNavItem" href="{{pathFor 'vendors'}}">{{vendors}}</a></li>
+					{{#if currentUser}}
+						<li class="hoverable" id="logoutMobile"><a class="">Log Out</a></li>
+					{{/if}}
+				</ul>
+			</div>
+		</nav>
+	</div>
+</template>
+
+
+
+
+<!--
+<template name="navbar">
+	<div class="row navbar" id="navbar">
+		<div>
+			<div id="searchBar">
+				<div class="container" id="innerSearchBar">
+					<div class="navbar-header">
+						<h1 class="brand">Sula</h1>
+					</div>
+					<form class="navbar-form navbar-left search" role="search">
+				        <div class="form-group">
+				          	<input type="text" class="form-control" name="search" placeholder="Search">
+				        </div>
+				        <button type="submit" class="btn btn-default">Search</button>
+				    </form>
+				    <ul class="nav navbar-nav navbar-right"> -->
+				    	<!-- <li><a href="#">Cart</a></li> -->
+				    	<!-- <li><a href="#">Help</a></li>
+				    	<li id="accountsPortal"><a>{{> sulaVendors}}</a></li>
+				    </ul>
+				</div>
+			</div>
+			<div id="navigation">
+				<div class="container" align="center">
+					<div class="col-md-2">
+						<span class="nav-links" id="home">Home</span>
+					</div>
+					<div class="col-md-2">
+						<span class="nav-links" id="entertainment">Entertainment</span>
+					</div>
+					<div class="col-md-2">
+						<span class="nav-links" id="shopping">Shopping</span>
+					</div>
+					<div class="col-md-2">
+						<span class="nav-links" id="foodNDrinks">Food & Drink</span>
+					</div>
+					<div class="col-md-2">
+						<span class="nav-links" id="study">Study</span>
+					</div>
+					<div class="col-md-2">
+						<span class="nav-links" id="services">Services</span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+
+/* nav */
+#searchBar {
+	background-color: rgb(34,34,34);
+}
+
+#innerSearchBar {
+	padding-left: 7em;
+	padding-right: 7em;
+}
+
+.brand {
+	color: rgb(137, 207, 240);
+	display: inline;
+	cursor: pointer;
+}
+
+#search {
+	/*margin-top: 1em;*/
+	/*margin-bottom: 0.5em;*/
+	margin-left: 2em;
+}
+
+#navigation {
+	background-color: rgb(51,51,51);
+}
+
+.nav-links {
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+/* /nav */
+
+
+
+Test secret key: sk_test_W1CalgZHeO1ggQQQ0pt40z6Z -->
+<!-- Test Publishable key: pk_test_tORFXwvyCdwkAHkFHXRhswWh -->

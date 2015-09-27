@@ -1,0 +1,31 @@
+<template name="search">
+    <div class="container">
+	{{> information}}
+		<br>
+
+		<div class="row">
+            {{#if offer}}
+        		{{#each offer}}
+        			{{> thumb}}
+        		{{/each}}
+            {{else}}
+                <div align="center">
+                    <h5>
+                        Sorry, there are no results that match your query... Try using fewer words or search with related words.
+                    </h5>
+                </div>
+            {{/if}}
+
+        <!-- {{#if Template.subscriptionsReady}}
+            {{#if hasMoreOffers}}
+                <a class="load-more btn" href="#">More Discounts</a>
+            {{/if}}
+        {{else}}
+            <div class="loading">
+                {{>spinner}}
+            </div>
+        {{/if}} -->
+		</div>
+
+	</div>
+</template>

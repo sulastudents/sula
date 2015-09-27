@@ -1,0 +1,23 @@
+<template name="offer">
+    <div class="container">
+	{{> information}}
+		<br>
+
+		<div class="row">
+		{{#each offer}}
+			{{> thumb}}
+		{{/each}}
+
+        {{#if Template.subscriptionsReady}}
+            {{#if hasMoreOffers}}
+                <a class="load-more btn" href="#">More Discounts</a>
+            {{/if}}
+        {{else}}
+            <div class="loading">
+                {{>spinner}}
+            </div>
+        {{/if}}
+		</div>
+
+	</div>
+</template>
