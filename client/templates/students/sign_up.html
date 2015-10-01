@@ -1,0 +1,98 @@
+<template name="signUp">
+    <div id="studentSignUp" class="container">
+        <div class="row">
+
+            <div class="col m8 offset-m2">
+
+                <h3 align="center">Get the Card!</h3>
+                <br>
+                <br>
+
+                <form action="">
+                    <div class="row">
+
+                        <!-- Full Name -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="fullName" type="text" name="fullName" class="validate">
+                                <label for="fullName">Your Full Name: </label>
+                            </div>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="dateOfBirth" type="date" name="dateOfBirth" class="datepicker">
+                                <label for="dateOfBirth">Date of Birth</label>
+                            </div>
+                        </div>
+
+                        <!-- Email Address -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" name="email" class="validate">
+                                <label for="email">Email Address</label>
+                            </div>
+                        </div>
+
+                        <!-- Phone Number (optional) -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="phnNumber" type="text" name="phnNumber" class="validate">
+                                <label for="phnNumber">Phone Number</label>
+                            </div>
+                        </div>
+
+                        <!-- School -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="school" type="text" name="school" class="validate">
+                                <label for="school">School</label>
+                            </div>
+                        </div>
+
+                        <!-- Student Number -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="studentNumber" type="text" name="studentNumber" class="validate">
+                                <label for="studentNumber">Student Number</label>
+                            </div>
+                        </div>
+
+                        <!-- Graduation Date -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="gradDate" type="date" name="gradDate" class="datepicker">
+                                <label for="gradDate">Graduation Date</label>
+                            </div>
+                        </div>
+
+                        <!-- Upload Photo -->
+                        <!-- <div class="row">
+                        <div class="input-field col s12">
+                        <input id="photo" type="text" name="photo" class="validate">
+                        <label for="photo">Upload Photo</label>
+                    </div>
+                </div> -->
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Photo</span>
+                        <input id="photo" type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Upload a suitable photo">
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="input-field">
+                    <div class="col s12">
+                        <button type="submit" id="studentSignUpBtn" class="btn btn-default">Get the Card!</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</template>

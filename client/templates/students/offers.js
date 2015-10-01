@@ -9,7 +9,7 @@ Template.offer.onCreated(function () {
 
     // initialize the reactive variable
     instance.loaded = new ReactiveVar(0);
-    instance.limit = new ReactiveVar(5);
+    instance.limit = new ReactiveVar(10);
     // instance.category = Session.get('category');
 
     // autorun
@@ -47,7 +47,7 @@ Template.offer.events({
         var limit = instance.limit.get();
 
         // increase limit by 5 and update it
-        limit += 5;
+        limit += 10;
         instance.limit.set(limit);
     }
 });
