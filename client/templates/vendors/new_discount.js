@@ -22,13 +22,13 @@ Template.newDiscount.events({
 			location: $(e.target).find('[name=location]').val(),
 			category: $(e.target).find('[name=category]').val(),
 			description: $(e.target).find('[name=description]').val()
-		}
+		};
 
 		Meteor.call('offerInsert', offer, function (error, result) {
 			// display error to user and abort
 			if (error) {
 				return throwError(error.reason);
-			};
+			}
 			//show this result but route anyway
 			// if (result.postExists) {
 			// 	throwError()
@@ -61,11 +61,11 @@ Template.newDiscount.events({
                     // console.log(srcData);
                     $('#preview').attr('src', srcData);
                     return srcData;
-                }
+                };
                 fileReader.readAsDataURL(fileToLoad);
 
             }
-        }
+        };
         encodeImageFileAsURL();
 	}
 });

@@ -13,3 +13,7 @@ Meteor.publish('discounts', function (category, limit) {
 Meteor.publish('search', function (query) {
 	return Discounts.find({title: new RegExp(query, "i") });
 });
+
+Meteor.publish('myDiscounts', function (userId) {
+	return Discounts.find({authorId: userId});
+});

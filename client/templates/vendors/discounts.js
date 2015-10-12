@@ -1,7 +1,17 @@
+Template.discounts.onCreated(function () {
+	var instance = this,
+		userId = Meteor.userId();
+
+	var subscription = instance.subscribe('myDiscounts', userId);
+
+	instance.myOffers = function () {
+        return Discounts.find({});
+    };
+});
+
 Template.discounts.helpers({
 	discountList: function () {
-		var user = Meteor.userId()
-		return Discounts.find({authorId: user}).fetch();
+		return Template.instance().myOffers();
 	}
 });
 

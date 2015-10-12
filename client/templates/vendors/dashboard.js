@@ -50,7 +50,7 @@ Template.dashboard.events({
 			website: document.getElementById('website').value,
 			address: document.getElementById('address').value,
 			description: document.getElementById('description').value,
-		}
+		};
 
 		// console.log(userInfo);
 		var user = Meteor.user();
@@ -98,16 +98,11 @@ Template.dashboard.events({
                     $('#dashboardLogo').css('background-image', 'url('+srcData+')');
                     Session.set('logo', srcData);
                     return srcData;
-                }
+                };
                 fileReader.readAsDataURL(fileToLoad);
 
             }
-        }
+        };
         encodeImageFileAsURL();
 	}
 });
-
-
-
-
-

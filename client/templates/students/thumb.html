@@ -1,32 +1,20 @@
 <template name="thumb">
-	<!-- <div class="col-sm-6 col-md-4">
-		<div class="thumbnail" style="">
-			<img src="{{image}}" style="height: 275px;" class="thumb-img" alt="...">
-			<div class="caption">
-				<h3>{{title}}</h3>
-				<p class="thumb-description">{{description}}</p>
-				<p align="right">
-					<a href="#" class="btn btn-primary" role="button">View Deal!</a> -->
-					<!-- <a href="#" class="btn btn-default" role="button">Button</a> -->
-				<!-- </p>
-			</div>
-		</div>
-	</div> -->
-	<div class="col s12 m6 l3">
-		<div class="card hoverable">
-			<div class="card-image">
-				<img class="activator" src="{{image}}" style="height: 275px;">
-			</div>
-			<div class="card-content">
-				<span class="card-title activator grey-text text-darken-4 truncate"><i class="zmdi zmdi-more-vert right"></i></span>
+	<div id="thumb">
+		<div class="col s12 m6 l3">
+			<div class="card hoverable">
+				<div class="card-image">
+					<img class="activator" src="{{image}}">
+				</div>
+				<!-- <div class="card-content"> -->
+				<!-- <span class="card-title activator grey-text text-darken-4 truncate"><i class="zmdi zmdi-more-vert right"></i></span> -->
 				<!-- <span class="card-title activator grey-text text-darken-4 truncate">{{title}}<i class="zmdi zmdi-more-vert right"></i></span> -->
 				<!-- <p><a href="#">This is a link</a></p> -->
-			</div>
-			<div class="card-reveal">
-				<span class="card-title grey-text text-darken-4">{{title}}<i class="zmdi zmdi-close right"></i></span>
-				<p>{{description}}</p>
+				<!-- </div> -->
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">{{title}}<i class="zmdi zmdi-close right"></i></span>
+					<p>{{description}}</p>
+				</div>
 			</div>
 		</div>
 	</div>
-
 </template>
