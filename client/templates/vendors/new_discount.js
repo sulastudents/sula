@@ -17,7 +17,7 @@ Template.newDiscount.events({
 
 		var offer = {
 			image: $('#preview').attr('src'),
-			title: $(e.target).find('[name=title]').val(),
+			// title: $(e.target).find('[name=title]').val(),
 			discount: $(e.target).find('[name=discount]').val(),
 			location: $(e.target).find('[name=location]').val(),
 			category: $(e.target).find('[name=category]').val(),

@@ -1,19 +1,17 @@
-// Template.layout.rendered = function(){
-//     $('.modal-trigger').leanModal({
-// 		dismissible: true, // Modal can be dismissed by clicking outside of the modal
-// 		opacity: 0.5, // Opacity of modal background
-// 		in_duration: 300, // Transition in duration
-// 		out_duration: 200, // Transition out duration
-// 		ready: function() { alert('Ready'); }, // Callback for Modal open
-// 		complete: function() { alert('Closed'); } // Callback for Modal close
-// 	});
-// };
-
 Template.layout.events({
     // "click .sign-in": function(event, template){
     //      event.preventDefault();
     //      document.getElementsByClassName('sign-in-form')[0].onsubmit = logIn(event, template);
     // }//,
+    "change #registerAcceptTerms": function (event) {
+        var checkbox = document.getElementById('registerAcceptTerms');
+        var registerBtn = document.getElementById('registerBtn');
+            if(checkbox.checked) {
+                $('#registerBtn').removeClass('disabled');
+            } else {
+                registerBtn.classList ? registerBtn.classList.add('disabled') : registerBtn.className += ' disabled';
+            }
+    },
     'submit .sign-in-form': function (e, t) {
 		e.preventDefault();
 
@@ -36,10 +34,13 @@ Template.layout.events({
 	},
     'submit .register-form': function (e, t) {
 		e.preventDefault();
+        var classes = $('#registerBtn')[0].classList;
+        if (_.indexOf(classes, 'disabled') > 0) {
+            toastr.error('Accept the Terms.');
+            return;
+        }
 
-		// var errors = validateRegistration (t.find('#registerName').value, t.find('#registerPassword').value, t.find('#registerConfirmPassword').value, t.find('#registerNumber').value, t.find('#registerEmail').value, t.find('#registerLoaction').value, t.find('#registerDescription').value);
-		// if(errors)
-			// console.log('errors');
+
 		if (t.find('#registerPassword').value !== t.find('#registerConfirmPassword').value) {
 			alert('Passwords do not match');
 		}

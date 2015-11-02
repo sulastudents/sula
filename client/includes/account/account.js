@@ -29,7 +29,8 @@ Template.sulaVendors.helpers({
 
 Accounts.onLogin(function () {
 	$('.close').click();
-	Router.go('vendors');
+	// console.log('logged in');
+	// Router.go('vendors');
 });
 
 

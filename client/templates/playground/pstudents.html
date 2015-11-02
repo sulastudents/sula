@@ -1,0 +1,32 @@
+<template name="pstudents">
+
+		{{> poffer}}
+
+</template>
+
+
+<template name="poffer">
+    <div class="container">
+	{{> information}}
+		<br>
+
+		<div class="row">
+		{{#each offer}}
+			{{> thumb}}
+		{{/each}}
+
+        {{#if Template.subscriptionsReady}}
+            {{#if hasMoreOffers}}
+                <div class="col s12" align="center">
+                    <a class="load-more btn" href="#">More Discounts</a>
+                </div>
+            {{/if}}
+        {{else}}
+            <div class="loading">
+                {{>spinner}}
+            </div>
+        {{/if}}
+		</div>
+
+	</div>
+</template>

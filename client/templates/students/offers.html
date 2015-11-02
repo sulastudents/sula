@@ -1,25 +1,35 @@
 <template name="offer">
     <div class="container">
-	{{> information}}
-		<br>
+        <div class="hide-on-small-only">
+            {{> information}}
+        </div>
+        <br>
 
-		<div class="row">
-		{{#each offer}}
-			{{> thumb}}
-		{{/each}}
+        <div class="row">
+            <div id="offers" class="col m9">
 
-        {{#if Template.subscriptionsReady}}
-            {{#if hasMoreOffers}}
-                <div class="col s12" align="center">
-                    <a class="load-more btn" href="#">More Discounts</a>
-                </div>
-            {{/if}}
-        {{else}}
-            <div class="loading">
-                {{>spinner}}
+                {{#each offer}}
+                    {{> thumb}}
+                {{/each}}
+
+                {{#if Template.subscriptionsReady}}
+                    {{#if hasMoreOffers}}
+                    <div class="col s12" align="center">
+                        <a class="load-more btn" href="#">More Discounts</a>
+                    </div>
+                    {{/if}}
+                {{else}}
+                    <div class="loading">
+                        {{>spinner}}
+                    </div>
+                {{/if}}
             </div>
-        {{/if}}
-		</div>
 
-	</div>
+            <div id="sideBannerContainer" class="col m3 hide-on-small-only">
+                {{> sideBanner}}
+            </div>
+
+        </div>
+
+    </div>
 </template>

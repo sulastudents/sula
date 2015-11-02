@@ -1,0 +1,254 @@
+/* HTML & Body */
+html {
+	height: 100%;
+	width: 100vw;
+	max-width: 100%;
+}
+body {
+	min-height: 100%;
+	width: 100vw;
+}
+
+#yield {
+	min-height: 50vh;
+}
+
+/* accounts */
+
+#accountsPortal {
+	cursor: pointer;
+}
+
+/* /accounts */
+
+/* dashboard */
+
+#userDash {
+	cursor: pointer;
+}
+
+#imgContainer {
+	position: relative;
+	/*width: 100%;*/
+	height: 100%;
+}
+
+#dashboardLogo {
+	background-image: url('resources/sla.png');
+	background-repeat: no-repeat;
+	/*width: 100%;
+	height: 100%;*/
+	background-size: 100% 15em;
+}
+
+.editLogo {
+	background-color: rgba(0,0,0,0);
+	color: rgba(255, 255, 255, 0);
+	border-radius: 5px;
+	height: 17em;
+}
+
+.editLogo:hover {
+	background-color: rgba(0,0,0,0.4);
+	color: rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	height: 17em;
+	cursor: pointer;
+}
+
+.inline {
+	display: inline;
+}
+
+
+/* /dashboard */
+
+
+/* newDiscount */
+
+.holder {
+    background: lightgrey;
+    width: 250px;
+    height: 250px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+	cursor: pointer;
+}
+
+/* /newDiscount */
+
+
+
+/* nav */
+#searchBar {
+	background-color: rgb(34,34,34);
+}
+
+#innerSearchBar {
+	padding-left: 7em;
+	padding-right: 7em;
+}
+
+.brand {
+	color: rgb(137, 207, 240);
+	display: inline;
+	cursor: pointer;
+}
+
+#search {
+	/*margin-top: 1em;*/
+	/*margin-bottom: 0.5em;*/
+	margin-left: 2em;
+}
+
+#navigation {
+	background-color: rgb(51,51,51);
+}
+
+.nav-links {
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+.nav-wrapper {
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+/* /nav */
+
+
+
+/* information */
+
+
+
+/* /information */
+
+/* vendorsInfo */
+
+#vendorsInfo {
+	height: 10em;
+	background-image: url('resources/bg/divider_1.jpeg');
+	margin-bottom: 1em;
+	margin-top: 0.8em;
+}
+
+/* /vendorsInfo */
+
+
+
+
+/* Start page */
+
+#startPage {
+	/*background-image: url('resources/bg/sunrise.jpeg');*/
+	/*background: url('resources/bg/site backgroundr.png');*/
+	min-height: 100vh;
+	background-size: 100% 100%;
+}
+
+#user {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+.start-vendor {
+	background-image: url('resources/people/student-girl.jpg');
+	background-size: 100% 100%;
+	width: 100%;
+	height: 250px;
+}
+
+.start-student {
+	background-image: url('resources/people/vendor-man.jpg');
+	background-size: 100% 100%;
+	width: 100%;
+	height: 250px;
+}
+
+.overlay {
+	background-color: rgba(0,0,0,0.5);
+	background-size: 100% 100%;
+	height: 250px;
+	color: rgba(255, 255, 255, 1.0);
+	z-index: 1;
+}
+.overlay:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.user-type {
+	margin-top: 0;
+}
+
+@media (max-width: 690px) {
+  .start-vendor {
+    margin-bottom: 1em;
+  }
+  .start-student {
+  	margin-bottom: 1em;
+  }
+}
+
+/* thumb */
+.thumb-description {
+	/*height: 100px;*/
+	/*overflow: hidden;*/
+}
+
+.thumb-img {
+	width: 350px;
+	height: 275px;
+}
+
+.image-holder {
+	margin-bottom: 20px;
+}
+
+/* Class */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+/*=====================*/
+
+
+#sulaLogo {
+	background-image: url("/resources/sla.png");
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+	background-size: 100% 100%;
+	z-index: 99999999999;
+	position: absolute;
+}
+
+#navContainer {
+	/*position: relative;*/
+	/*padding-top: 80px;*/
+	border: 3px solid;
+	border-radius: 15px;
+	margin-bottom: 0px;
+	/*height: 20px;*/
+}
+
+.sula-blue {
+	background-color: #0DC0FF;
+}
+
+.picker__date-display, .picker__weekday-display {
+	@extend .sula-blue;
+}
+
+.container {
+	width: 90%;
+}

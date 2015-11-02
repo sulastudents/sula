@@ -1,0 +1,76 @@
+<template name="editDiscount">
+    <div class="container">
+        {{#with offer}}
+
+        <div class="col m8 offset-m2">
+			<h3 align="center">List your Discount!</h3>
+			<form class="form-horizontal" id="editOffer">
+
+				<div class="col m10 offset-m2" align="center">
+					<img src="{{image}}" id="preview" class="img-rounded holder" alt="">
+					<div style="display:none;">
+						<input type="file" id="fileInput">
+					</div>
+					<hr>
+				</div>
+
+
+				<!-- <div class="row">
+					<div class="input-field col s12">
+						<input id="title" type="text" name="title" value="{{title}}" class="validate">
+						<label for="title" class="active">Title</label>
+					</div>
+				</div> -->
+
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="discount" type="number" name="discount" value="{{discount}}" class="validate">
+						<label for="discount" class="active">Discount</label>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="location" type="text" name="location" value="{{location}}" class="validate">
+						<label for="location" class="active">Location</label>
+					</div>
+				</div>
+
+
+
+				<div class="input-field col s12">
+					<select class="category" name="category" id="categoryList">
+						<!-- <option value="" disabled selected>Choose your Category</option> -->
+						<option value="shopping" selected>Shopping</option>
+						<option value="entertainment">Entertainment</option>
+						<option value="foodNDrinks">Food & Drink</option>
+						<option value="services">Services</option>
+						<option value="study">Study</option>
+					</select>
+					<label class="active">Category</label>
+				</div>
+
+
+				<div class="row">
+					<div class="input-field col s12">
+						<textarea id="description" class="materialize-textarea" value="{{description}}" name="description" length="120"></textarea>
+						<label for="description" class="active">Description</label>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="input-field">
+					<div class="col offset-s2 col s10">
+						<button type="submit" class="btn btn-default">Update Offer!</button>
+					</div>
+				</div>
+			</form>
+		</div>
+        {{/with}}
+
+    </div>
+</template>

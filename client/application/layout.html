@@ -76,11 +76,15 @@
 						<textarea id="registerDescription" class="materialize-textarea" length="120"></textarea>
 						<label for="registerDescription">About your Business</label>
 					</div>
+					<p class="col offset-s1">
+						<input type="checkbox" id="registerAcceptTerms" />
+						<label for="registerAcceptTerms">I Accept the <a href="{{pathFor 'termsOfUse'}}" class="modal-close">Terms and Conditions</a></label>
+					</p>
 					<!-- </form> -->
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn waves-effect waves-light" type="submit" name="action">Register
+				<button id="registerBtn" class="btn waves-effect waves-light disabled" type="submit" name="action">Register
 					<i class="mdi mdi-lock-open-outline"></i>
 				</button>
 				<!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn  register">Register</a> -->

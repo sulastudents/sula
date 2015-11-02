@@ -26,8 +26,10 @@ Template.signUp.events({
             phnNumber: $('#phnNumber').val(),
             school: $('#school').val(),
             studentNumber: $('#studentNumber').val(),
-            gradDate: $('#gradDate').val(),
-            photo: $('#preview')[0].src
+            gradDate: $('#gradDate').val()
+            
+            // phot removed because cards are no longer printed with photoes
+            // photo: $('#preview')[0].src
         };
 
         // console.log(form);
