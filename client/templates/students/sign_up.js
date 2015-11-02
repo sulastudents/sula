@@ -16,8 +16,23 @@ Template.signUp.rendered = function() {
 };
 
 Template.signUp.events({
+    "change #studentsAcceptTerms": function (event) {
+        var checkbox = document.getElementById('studentsAcceptTerms');
+        var registerBtn = document.getElementById('studentSignUpBtn');
+            if(checkbox.checked) {
+                $('#studentSignUpBtn').removeClass('disabled');
+            } else {
+                registerBtn.classList ? registerBtn.classList.add('disabled') : registerBtn.className += ' disabled';
+            }
+    },
     'submit form': function(event, template) {
         event.preventDefault();
+
+        var classes = $('#studentSignUpBtn')[0].classList;
+        if (_.indexOf(classes, 'disabled') > 0) {
+            toastr.error('Accept the Terms.');
+            return;
+        }
 
         var form = {
             name: $('#fullName').val(),
@@ -27,8 +42,8 @@ Template.signUp.events({
             school: $('#school').val(),
             studentNumber: $('#studentNumber').val(),
             gradDate: $('#gradDate').val()
-            
-            // phot removed because cards are no longer printed with photoes
+
+            // photo removed because cards are no longer printed with photoes
             // photo: $('#preview')[0].src
         };
 
