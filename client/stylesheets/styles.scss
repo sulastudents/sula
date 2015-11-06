@@ -7,6 +7,7 @@ html {
 body {
 	min-height: 100%;
 	width: 100vw;
+	background-image: url('/resources/bg/site_background.png');
 }
 
 #yield {
@@ -243,6 +244,10 @@ body {
 
 .sula-blue {
 	background-color: #0DC0FF;
+}
+
+.sula-blue-text {
+	color: #0DC0FF;
 }
 
 .picker__date-display, .picker__weekday-display {

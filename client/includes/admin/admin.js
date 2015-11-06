@@ -46,6 +46,21 @@ Template.admin.events({
 
         Session.set('adminTemplate', 'adminStudents');
         return;
+    },
+    'click #resetAdmin': function (event) {
+        event.preventDefault();
+
+        Meteor.call("resetAdmin", function(error, result){
+            if(error){
+                console.log("error", error);
+                toastr.error("error");
+                return;
+            }
+            if(result){
+                 toastr.success("success!");
+                 return;
+            }
+        });
     }
 });
 
@@ -89,7 +104,7 @@ Template.adminSetPassword.events({
             return;
         });
     },
-    "click #deleteUser": function (event) {
+    "click .deleteUser": function (event) {
         event.preventDefault();
 
         var userId = this._id;

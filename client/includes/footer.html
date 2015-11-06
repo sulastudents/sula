@@ -2,7 +2,61 @@
     <footer class="page-footer transparent">
         <hr color="#0DC0FF">
         <div class="container">
+
+
             <div class="row">
+                <div class="col s12 m2">
+                    <ul>
+                        <li><a class=" text-lighten-3" href="{{pathFor 'about'}}">ABOUT US</a></li>
+                        <li><a class=" text-lighten-3" href="{{pathFor 'faq'}}">FAQs</a></li>
+                        <li><a class=" text-lighten-3" href="{{pathFor 'vendors'}}">VENDORS</a></li>
+                    </ul>
+                </div>
+                <div class="col s12 m2">
+                    <ul>
+                        <li><a class=" text-lighten-3" href="{{pathFor 'privacyPolicy'}}">PRIVACY POLICY</a></li>
+                        <li><a class=" text-lighten-3" href="{{pathFor 'termsOfUse'}}">TERMS OF USE</a></li>
+                        <li><a class=" text-lighten-3" href="{{pathFor 'termsOfUse'}}">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <div class="col s12 m4">
+                    <div class="row">
+                        <i class="zmdi zmdi-instagram zmdi-hc-2x right"></i>
+                        &nbsp;
+                        <i class="zmdi zmdi-google-plus zmdi-hc-2x right"></i>
+                        &nbsp;
+                        <i class="zmdi zmdi-facebook zmdi-hc-2x right"></i>
+                    <!-- </span> -->
+                    </div>
+                    <div class="row">
+                        <form id="search-sula">
+                            <div class="input-field">
+                                <input id="search" type="search" placeholder="Search Sula" required>
+                                <label for="search"><i class="zmdi zmdi-search"></i></label>
+                                <!-- <i class="zmdi zmdi-close"></i> -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col s12 m4" align="right">
+                    <!-- <div class="row">
+                        <img class="responsive-img" id="footer-logo" src="/resources/footer_logo1.png" alt="sula students">
+                    </div> -->
+                    <div class="row">
+                        <div class="footer-copyright">
+                            <div class="container">
+                                © {{copyrightYear}} Sula Student <span id="services">Services</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- <div class="row">
                 <div class="col l6 s12">
                     <h5 class="">Sula Student Service</h5>
                     <p class=" text-lighten-4">The service for awesome students, by awesome students!</p>
@@ -16,12 +70,12 @@
                         <li><a class=" text-lighten-3" href="{{pathFor 'termsOfUse'}}">Terms of use</a></li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="footer-copyright">
+        <!-- <div class="footer-copyright">
             <div class="container">
                 © {{copyrightYear}} Sula Student <span id="services">Services</span>
             </div>
-        </div>
+        </div> -->
     </footer>
 </template>

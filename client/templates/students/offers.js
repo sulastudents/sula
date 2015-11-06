@@ -60,5 +60,9 @@ Template.offer.helpers({
     // are there any more offers to show
     hasMoreOffers: function () {
         return Template.instance().offers().count() >= Template.instance().limit.get();
+    },
+
+    isDEALS: function () {
+        return Session.equals('category', 'deals');
     }
 });

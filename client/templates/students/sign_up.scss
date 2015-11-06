@@ -1,6 +1,54 @@
 #studentSignUp {
+    margin-top: 5%;
+
+    #applicationTitle {
+        // color: blue;
+        margin-top: 0;
+    }
+
+    #signUpContainer {
+        border-radius: 20px;
+        background-color: white;
+    }
+
+    #signUpHalf {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .input-field {
+        margin: 0;
+    }
+
+    #sign-up-image {
+        background-image: url("/resources/bg/sign_up_page_background.png");
+        background-size: 100px 100px;
+        padding: 0;
+    }
+
+    // input {
+    //     margin: 0;
+    // }
+
     #studentSignUpBtn {
         width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    #studentsAcceptTermsLabel {
+        margin-left: 5px;
+    }
+
+    #studentsAcceptTerms {
+        margin-left: 5px;
     }
 
     .btn {

@@ -2,11 +2,16 @@
     <div id="studentSignUp" class="container">
         <div class="row">
 
-            <div class="col m8 offset-m2">
+            <!-- <div id="sign-up-image" class="col m7"> -->
+                <!-- <img src="/resources/bg/sign_up_page_background_1.png" class="responsive-img" alt=""> -->
+            <!-- </div> -->
 
-                <h3 align="center">Get the Card!</h3>
-                <br>
-                <!-- <br> -->
+
+            <div id="signUpHalf" class="col m6 offset-m3 sula-blue">
+
+                <div id="signUpContainer">
+
+                <h3 align="center" id="applicationTitle" class="sula-blue-text">Card Application Form!</h3>
 
                 <form action="">
                     <div class="row">
@@ -23,101 +28,56 @@
                             </div>
                         </div>
 
-                        <!-- Date of Birth -->
-                        <!-- <div class="row">
-                        <div class="input-field col s12">
-                        <input id="dateOfBirth" type="date" name="dateOfBirth" class="datepicker">
-                        <label for="dateOfBirth">Date of Birth</label>
-                    </div>
-                </div> -->
+                        <!-- Email Address -->
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="email" type="email" name="email" class="validate">
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="phnNumber" type="text" name="phnNumber" class="validate">
+                                <label for="phnNumber">Phone Number</label>
+                            </div>
+                        </div>
 
-                <!-- Email Address -->
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="email" type="email" name="email" class="validate">
-                        <label for="email">Email Address</label>
+                        <!-- School -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="school" type="text" name="school" class="validate">
+                                <label for="school">School</label>
+                            </div>
+                        </div>
+
+                        <!-- Student Number -->
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="studentNumber" type="text" name="studentNumber" class="validate">
+                                <label for="studentNumber">Student Number</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="gradDate" type="date" name="gradDate" class="datepicker">
+                                <label for="gradDate">Graduation Date</label>
+                            </div>
+                        </div>
+
+                        <!-- Terms and conditions -->
+                        <div class="row" id="studentsAcceptTermsLabel">
+                            <!-- <p> -->
+                            <input type="checkbox" id="studentsAcceptTerms" />
+                            <label for="studentsAcceptTerms">I have read and accepted the <a href="{{pathFor 'termsOfUse'}}">Terms and Conditions</a>.</label>
+                            <!-- </p> -->
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="input-field">
+                            <div class="col s12">
+                                <button type="submit" id="studentSignUpBtn" class="btn btn-default disabled">Get the Card!</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="input-field col s6">
-                        <input id="phnNumber" type="text" name="phnNumber" class="validate">
-                        <label for="phnNumber">Phone Number</label>
-                    </div>
+                </form>
                 </div>
-
-                <!-- Phone Number (optional) -->
-                <!-- <div class="row">
-                <div class="input-field col s12">
-                <input id="phnNumber" type="text" name="phnNumber" class="validate">
-                <label for="phnNumber">Phone Number</label>
-            </div>
-        </div> -->
-
-        <!-- School -->
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="school" type="text" name="school" class="validate">
-                <label for="school">School</label>
             </div>
         </div>
-
-        <!-- Student Number -->
-        <div class="row">
-            <div class="input-field col s6">
-                <input id="studentNumber" type="text" name="studentNumber" class="validate">
-                <label for="studentNumber">Student Number</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="gradDate" type="date" name="gradDate" class="datepicker">
-                <label for="gradDate">Graduation Date</label>
-            </div>
-        </div>
-
-        <!-- Terms and conditions -->
-        <div class="row">
-            <!-- <p> -->
-                <input type="checkbox" id="studentsAcceptTerms" />
-                <label for="studentsAcceptTerms">I have read and accepted the <a href="{{pathFor 'termsOfUse'}}">Terms and Conditions</a>.</label>
-            <!-- </p> -->
-        </div>
-
-        <!-- Graduation Date -->
-        <!-- <div class="row">
-        <div class="input-field col s12">
-        <input id="gradDate" type="date" name="gradDate" class="datepicker">
-        <label for="gradDate">Graduation Date</label>
     </div>
-</div> -->
-
-<!-- Upload Photo -->
-<!-- <div class="row">
-<div class="input-field col s12">
-<input id="photo" type="text" name="photo" class="validate">
-<label for="photo">Upload Photo</label>
-</div>
-</div> -->
-<!-- <div class="file-field input-field">
-<div class="btn">
-<span>Photo</span>
-<input id="photo" type="file">
-</div>
-<div class="file-path-wrapper">
-<input class="file-path validate" type="text" placeholder="Upload a suitable photo">
-</div>
-</div> -->
-
-
-<!-- <div id="previewContainer" style="display: none">
-<img id="preview" src="" alt="">
-</div> -->
-
-<!-- Submit -->
-<div class="input-field">
-    <div class="col s12">
-        <button type="submit" id="studentSignUpBtn" class="btn btn-default disabled">Get the Card!</button>
-    </div>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
 </template>

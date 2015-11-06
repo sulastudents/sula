@@ -1,6 +1,6 @@
 Template.information.rendered = function(){
     $('#carousel').slick({
-        dots: true,
+        // dots: true,
         arrows: true,
         autoplay: true,
         autoplaySpeed: 3000,
