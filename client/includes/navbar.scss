@@ -12,15 +12,19 @@
     }
 }
 
-// #navbar-fixed {
-//     #menu-items {
-//         // margin-left: 200px;
-//         li {
-//             margin-left: 200px;
-//             margin-right: 20px;
-//         }
-//     }
-// }
+#navbar-fixed {
+    // nav {
+    //     height: 150px;
+    // }
+    #menu-items {
+
+    }
+
+    .sign-up-li {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 
 nav ul li {
     margin-left:25px;

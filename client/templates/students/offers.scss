@@ -1,13 +1,18 @@
 // #offer {
-    .informationCtainer {
-        // margin: 100px;
-        padding-left: 1%;
-        width: 99%;
-    }
+
 
     #hottestDealsTitle {
         color: red;
         margin-left: 2%;
         font-weight: bold;
+    }
+
+    #offersContainer {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+
+        .row {
+            margin-bottom: 0;
+        }
     }
 // }

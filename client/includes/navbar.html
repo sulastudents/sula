@@ -1,9 +1,9 @@
 <template name="navbar">
-	<div class="navbar-fixed">
+	<div id="navbar-fixed">
 		<nav class="sula-blue">
 			<div class="nav-wrapper">
 				<a href="{{pathFor 'students'}}" class="brand-logo">
-					<img class="responsive-img" id="logo" src="/resources/sula_logo_official.png" alt="Sula Students">
+					<img class="responsive-img" id="logo" src="/resources/site logo.png" alt="Sula Students">
 				</a>
 				<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="zmdi zmdi-menu"></i></a>
 				<ul id="menu-items" class="hide-on-med-and-down" style="margin-left: 100px;">
@@ -15,9 +15,10 @@
 					<li class="hoverable students services"><a class="services" href="{{pathFor 'students'}}">Services</a></li>
 					<li class="hoverable" id="accountsPortal"><a>{{> sulaVendors}}</a></li>
 					<li class="">{{>sulaSearch}}</li>
+					<li class="sign-up-li"><a class="btn red" href="{{pathFor 'signUp'}}">Sign Up</a></li>
 				</ul>
 				<ul class="side-nav" id="mobile-nav">
-					<li id="sideNavLogo" align="center"><img src="/resources/sula_logo_official.png" alt="Sula Students"></li>
+					<li id="sideNavLogo" align="center"><img src="/resources/site logo.png" alt="Sula Students"></li>
 					<li class="divider"></li>
 					<li><a class="sideNavItem deals" href="{{pathFor 'students'}}">Deals!</a></li>
 					<li><a class="sideNavItem entertainment" href="{{pathFor 'students'}}">Entertainment</a></li>
@@ -29,6 +30,7 @@
 					{{#if currentUser}}
 						<li class="hoverable" id="logoutMobile"><a class="">Log Out</a></li>
 					{{/if}}
+					<li><a class="btn red" href="{{pathFor 'signUp'}}">Sign Up</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -87,40 +89,6 @@
 	</div>
 </template>
 
-
-/* nav */
-#searchBar {
-	background-color: rgb(34,34,34);
-}
-
-#innerSearchBar {
-	padding-left: 7em;
-	padding-right: 7em;
-}
-
-.brand {
-	color: rgb(137, 207, 240);
-	display: inline;
-	cursor: pointer;
-}
-
-#search {
-	/*margin-top: 1em;*/
-	/*margin-bottom: 0.5em;*/
-	margin-left: 2em;
-}
-
-#navigation {
-	background-color: rgb(51,51,51);
-}
-
-.nav-links {
-	color: rgb(255, 255, 255);
-	font-size: 1.5em;
-	cursor: pointer;
-}
-
-/* /nav */
 
 
 

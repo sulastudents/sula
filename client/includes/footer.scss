@@ -1,19 +1,49 @@
 footer.page-footer .footer-copyright {
-    color: black;
+    // color: black;
     background-color: rgba(0, 0, 0, 0);
 
 }
 
+footer.page-footer {
+    margin: 0;
+    background-color: #0DC0FF;
+    padding-top: 0;
+
+    a {
+        color: white;
+    }
+}
+
 footer {
+
+
     .zmdi {
         color: #0DC0FF;
+    }
+
+    .zmdi-instagram, .zmdi-google-plus, .zmdi-facebook {
+        background-color: white;
+        padding: 10px;
+        border-radius: 100px;
+        font-size: 1.5em;
+        cursor: pointer;
     }
 
     .input-field {
         color: black;
     }
 
+
     #footer-logo {
-        width: 100px
+        width: 100px;
+        margin-right: 50px;
+    }
+
+    hr {
+        margin-top: 0;
+    }
+
+    .row {
+        margin: 0;
     }
 }

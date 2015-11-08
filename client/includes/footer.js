@@ -19,5 +19,9 @@ Template.footer.events({
 		Session.set('search', toSearch);
 		$('body').click();
 		Router.go('results');
-	}
+	},
+    'click .zmdi-facebook': function () {
+        window.location = "https://www.facebook.com/SulaStudents/";
+        return;
+    }
 });
