@@ -1,6 +1,6 @@
 #information {
     width: 100%;
-	height: 18em;
+	height: 25em;
 	// background-image: url('resources/bg/divider_1.jpeg');
 	// margin-bottom: 1em;
 	// margin-top: 0.8em;
@@ -11,5 +11,16 @@
 }
 
 #carousel img {
-    height: 18em;
+    height: 25em;
+}
+
+@media only screen and (max-width: 500px) {
+    #information {
+        width: 100%;
+    	height: 15em;
+    }
+
+    #carousel img {
+        height: 15em;
+    }
 }

@@ -1,5 +1,8 @@
 #studentSignUp {
-    margin-top: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    // background-image: url("/resources/bg/sign_up_page_background.png");
+    background-image: url("/resources/bg/site_background.png");
 
     #applicationTitle {
         // color: blue;
@@ -43,7 +46,7 @@
         margin-top: 10px;
     }
 
-    #studentsAcceptTermsLabel {
+    #studentsAcceptTermsLabel, #verifyInfo {
         margin-left: 5px;
     }
 

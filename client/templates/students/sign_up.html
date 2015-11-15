@@ -1,83 +1,135 @@
 <template name="signUp">
-    <div id="studentSignUp" class="container">
-        <div class="row">
+    <div id="studentSignUp">
+        <div class="container">
+            <div class="row">
 
-            <!-- <div id="sign-up-image" class="col m7"> -->
+                <!-- <div id="sign-up-image" class="col m7"> -->
                 <!-- <img src="/resources/bg/sign_up_page_background_1.png" class="responsive-img" alt=""> -->
-            <!-- </div> -->
+                <!-- </div> -->
 
 
-            <div id="signUpHalf" class="col m6 offset-m3 sula-blue">
+                <div id="signUpHalf" class="col m6 offset-m3 sula-blue">
 
-                <div id="signUpContainer">
+                    <div id="signUpContainer">
 
-                <h3 align="center" id="applicationTitle" class="sula-blue-text">Card Application Form!</h3>
+                        <h3 align="center" id="applicationTitle" class="sula-blue-text">Card Application Form!</h3>
 
-                <form action="">
-                    <div class="row">
+                        <form action="">
+                            <div class="row">
 
-                        <!-- Full Name -->
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="fullName" type="text" name="fullName" class="validate">
-                                <label for="fullName">Your Full Name: </label>
+                                <!-- Full Name -->
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input id="fullName" type="text" name="fullName" class="validate">
+                                        <label for="fullName">Your Full Name: </label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="dateOfBirth" type="date" name="dateOfBirth" class="datepicker">
+                                        <label for="dateOfBirth">Date of Birth</label>
+                                    </div>
+                                </div>
+
+                                <!-- Email Address -->
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input id="email" type="email" name="email" class="validate">
+                                        <label for="email">Email Address</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="phnNumber" type="text" name="phnNumber" class="validate">
+                                        <label for="phnNumber">Phone Number</label>
+                                    </div>
+                                </div>
+
+                                <!-- School -->
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input id="school" type="text" name="school" class="validate">
+                                        <label for="school">School</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="studentNumber" type="text" name="studentNumber" class="validate">
+                                        <label for="studentNumber">Student Number</label>
+                                    </div>
+                                </div>
+
+                                <!-- Student Number -->
+                                <div class="row">
+                                    <!-- <div class="input-field col s6">
+                                    <input id="studentNumber" type="text" name="studentNumber" class="validate">
+                                    <label for="studentNumber">Student Number</label>
+                                </div> -->
+                                <div class="input-field col s6">
+                                    <select id="gender">
+                                        <!-- <option value="" disabled selected>Gender</option> -->
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <!-- <option value="3"></option> -->
+                                    </select>
+                                    <label>Gender</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="gradDate" type="date" name="gradDate" class="datepicker">
+                                    <label for="gradDate">Graduation Date</label>
+                                </div>
                             </div>
-                            <div class="input-field col s6">
-                                <input id="dateOfBirth" type="date" name="dateOfBirth" class="datepicker">
-                                <label for="dateOfBirth">Date of Birth</label>
+
+
+                            <!-- Extra options  -->
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <select id="delivery">
+                                        <!-- <option value="" disabled selected>Gender</option> -->
+                                        <option value="delivery">Delivery</option>
+                                        <option value="pickup">Pick-up</option>
+                                        <!-- <option value="3"></option> -->
+                                    </select>
+                                    <label>Delivery</label>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <select id="payment">
+                                        <!-- <option value="" disabled selected>Gender</option> -->
+                                        <option value="mpesa">M-Pesa</option>
+                                        <option value="airtelMoney">Airtel Money</option>
+                                        <option value="tigoPesa">Tigo Pesa</option>
+                                        <!-- <option value="3"></option> -->
+                                    </select>
+                                    <label>Payment Method</label>
+                                </div>
+                            </div>
+
+                            <!-- Terms and conditions -->
+                            <div class="row" id="studentsAcceptTermsLabel">
+                                <!-- <p> -->
+                                <input type="checkbox" id="studentsAcceptTerms" />
+                                <label for="studentsAcceptTerms">I have read and accepted the <a href="{{pathFor 'termsOfUse'}}">Terms and Conditions</a>.</label>
+                                <!-- </p> -->
+                                <input type="checkbox" id="verifyInfo" />
+                                <label for="verifyInfo">I hearby verify that all the information submitted above in this form is true and accurate to the best of my knowledge.</label>
+                            </div>
+
+
+
+                            <!-- Terms and conditions -->
+                            <!-- <div class="row" id="verifyInfo"> -->
+                                <!-- <p> -->
+                                <!-- <input type="checkbox" id="verifyInfo" /> -->
+                                <!-- <label for="verifyInfo">I hearby verify that all the information submitted above in this form is true and accurate to the best of my knowledge.</label> -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+
+                            <!-- Submit -->
+                            <div class="input-field">
+                                <div class="col s12">
+                                    <button type="submit" id="studentSignUpBtn" class="btn btn-default disabled">Get the Card!</button>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Email Address -->
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="email" type="email" name="email" class="validate">
-                                <label for="email">Email Address</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="phnNumber" type="text" name="phnNumber" class="validate">
-                                <label for="phnNumber">Phone Number</label>
-                            </div>
-                        </div>
-
-                        <!-- School -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="school" type="text" name="school" class="validate">
-                                <label for="school">School</label>
-                            </div>
-                        </div>
-
-                        <!-- Student Number -->
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="studentNumber" type="text" name="studentNumber" class="validate">
-                                <label for="studentNumber">Student Number</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="gradDate" type="date" name="gradDate" class="datepicker">
-                                <label for="gradDate">Graduation Date</label>
-                            </div>
-                        </div>
-
-                        <!-- Terms and conditions -->
-                        <div class="row" id="studentsAcceptTermsLabel">
-                            <!-- <p> -->
-                            <input type="checkbox" id="studentsAcceptTerms" />
-                            <label for="studentsAcceptTerms">I have read and accepted the <a href="{{pathFor 'termsOfUse'}}">Terms and Conditions</a>.</label>
-                            <!-- </p> -->
-                        </div>
-
-                        <!-- Submit -->
-                        <div class="input-field">
-                            <div class="col s12">
-                                <button type="submit" id="studentSignUpBtn" class="btn btn-default disabled">Get the Card!</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </template>
