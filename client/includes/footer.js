@@ -23,5 +23,9 @@ Template.footer.events({
     'click .zmdi-facebook': function () {
         window.location = "https://www.facebook.com/SulaStudents/";
         return;
+    },
+    'click #footer-logo': function () {
+        Router.go('students');
+        return;
     }
 });
