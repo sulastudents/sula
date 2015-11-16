@@ -17,4 +17,4 @@ Template.information.helpers({
         }
         return false;
     }
-})
+});

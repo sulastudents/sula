@@ -3,6 +3,13 @@
 		{{> information}}
 	</div>
 	<div id="students">
+		{{#if isMobile}}
+		<div align="center">
+			<br>
+			<a href="{{pathFor 'signUp'}}" class="btn red">Get the Card!</a>
+		</div>
+		{{/if}}
+
 		{{> offer}}
 	</div>
 </template>
