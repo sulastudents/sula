@@ -40,6 +40,16 @@ Template.signUp.events({
             registerBtn.classList ? registerBtn.classList.add('disabled') : registerBtn.className += ' disabled';
         }
     },
+    'change #payment': function () {
+        if ($('#payment option').filter(':selected').val() === "cash") {
+            var sulaNumber = document.getElementById('sulaNumber');
+            sulaNumber.className += 'hidden';
+        } else {
+            var sulaNumber = document.getElementById('sulaNumber');
+            sulaNumber.className = "";
+        }
+        console.log(this);
+    },
     'submit form': function(event, template) {
         event.preventDefault();
 
