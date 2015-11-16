@@ -6,6 +6,7 @@
 			<a style="color:#FFFFFF;" href="{{pathFor 'signUp'}}">
 				<button class="btn btn-primary">Sula Card!!</button>
 			</a> -->
+			{{#unless isMobile}}
 			<div id="carousel">
 		      <div><img src="/resources/browse_hq.png" width="100%" alt="Sula Students" /></div>
 		      <div><img src="/resources/bundle & save_hq.png" width="100%" alt="Tanzanian Students" /></div>
@@ -13,6 +14,15 @@
 			  <div><img src="/resources/stay social_hq.png" width="100%" alt="Student Discounts" /></div>
 			  <!-- <div><img src="/resources/Picture2.png" width="100%" /></div> -->
 		    </div>
+			{{else}}
+			<div id="carousel">
+		      <div><img src="/resources/browse mobile.png" width="100%" alt="Sula Students" /></div>
+		      <div><img src="/resources/bundle & save mobile.png" width="100%" alt="Tanzanian Students" /></div>
+		      <!-- <div><img src="/resources/sign up.png" width="100%" /></div> -->
+			  <div><img src="/resources/stay social mobile.png" width="100%" alt="Student Discounts" /></div>
+			  <!-- <div><img src="/resources/Picture2.png" width="100%" /></div> -->
+		    </div>
+			{{/unless}}
 		</div>
 	</div>
 </template>
