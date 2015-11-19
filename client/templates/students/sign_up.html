@@ -1,18 +1,13 @@
 <template name="signUp">
     <div id="studentSignUp">
-        <div class="container">
-            <div class="row">
+        <div class="row">
+            <div class="container">
 
-                <!-- <div id="sign-up-image" class="col m7"> -->
-                <!-- <img src="/resources/bg/sign_up_page_background_1.png" class="responsive-img" alt=""> -->
-                <!-- </div> -->
-
-
-                <div id="signUpHalf" class="col m6 offset-m3 sula-blue">
+                <div id="signUpHalf" class="col s12 m6 offset-m3 sula-blue">
 
                     <div id="signUpContainer">
 
-                        <h3 align="center" id="applicationTitle" class="sula-blue-text">Card Application Form!</h3>
+                        <h3 align="center" id="applicationTitle" class="sula-blue-text">Card Application Form</h3>
 
                         <form action="">
                             <div class="row">
@@ -102,33 +97,40 @@
 
                             <!-- Terms and conditions -->
                             <div class="row" id="studentsAcceptTermsLabel">
-                                <span id="sulaNumber" class="">
-                                    Mobile payments should be sent to <a href="tel:+255716282328" class="sula-blue-text">0716282328</a>.
-                                </span>
-                                <!-- <p> -->
-                                <input type="checkbox" id="studentsAcceptTerms" />
-                                <label for="studentsAcceptTerms">I have read and accepted the <a href="{{pathFor 'termsOfUse'}}">Terms and Conditions</a>.</label>
-                                <!-- </p> -->
-                                <input type="checkbox" id="verifyInfo" />
-                                <label for="verifyInfo">I hearby verify that all the information submitted above in this form is true and accurate to the best of my knowledge.</label>
-                            </div>
+                                <div class="container">
+                                    <span id="sulaNumber" class="">
+                                        Mobile payments should be sent to <a href="tel:+255716282328" class="sula-blue-text">0716282328</a>.
+                                    </span>
+                                    <br>
+                                    <p>
+                                    <div class="row">
+                                        <input type="checkbox" id="studentsAcceptTerms" />
+                                        <label for="studentsAcceptTerms">I have read and accepted the <a href="{{pathFor 'termsOfUse'}}">Terms and Conditions</a>.</label>
+                                    </div>
 
+                                    </p>
+                                    <p>
+                                    <div class="row">
+                                        <input type="checkbox" id="verifyInfo" />
+                                        <label for="verifyInfo">I hearby verify that all the information submitted above in this form is true and accurate to the best of my knowledge.</label>
+                                    </div>
 
-
-                            <!-- Terms and conditions -->
-                            <!-- <div class="row" id="verifyInfo"> -->
-                                <!-- <p> -->
-                                <!-- <input type="checkbox" id="verifyInfo" /> -->
-                                <!-- <label for="verifyInfo">I hearby verify that all the information submitted above in this form is true and accurate to the best of my knowledge.</label> -->
-                                <!-- </p> -->
-                            <!-- </div> -->
-
-                            <!-- Submit -->
-                            <div class="input-field">
-                                <div class="col s12">
-                                    <button type="submit" id="studentSignUpBtn" class="btn btn-default disabled">Get the Card!</button>
+                                    </p>
                                 </div>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <div class="input-field">
+                                        <div class="col s12">
+                                            <button type="submit" id="studentSignUpBtn" class="btn btn-default disabled">Get the Card!</button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
+
+
                         </div>
                     </form>
                 </div>

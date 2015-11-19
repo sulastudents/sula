@@ -1,3 +1,6 @@
+// Template.information.created({
+    // Session.set("sceenWidth", screen.width);
+// });
 Template.information.rendered = function(){
     $('#carousel').slick({
         // dots: true,

@@ -20,6 +20,13 @@
         padding-left: 10px;
         padding-right: 10px;
         border-radius: 10px;
+        // margin-left: 25%;
+    }
+
+    @media (min-width: 690px)  {
+        #signUpHalf {
+            margin-left: 22.5%;
+        }
     }
 
     .row {
@@ -46,13 +53,13 @@
         margin-top: 10px;
     }
 
-    #studentsAcceptTermsLabel, #verifyInfo {
-        margin-left: 5px;
-    }
+    // #studentsAcceptTermsLabel, #verifyInfo {
+    //     margin-left: 5px;
+    // }
 
-    #studentsAcceptTerms {
-        margin-left: 5px;
-    }
+    // #studentsAcceptTerms {
+    //     margin-left: 5px;
+    // }
 
     .btn {
         background-color: rgba(0,0,0,0);
