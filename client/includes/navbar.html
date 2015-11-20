@@ -1,5 +1,5 @@
 <template name="navbar">
-	<div id="navbar-fixed">
+	<div class="navbar-fixed">
 		<nav class="sula-blue">
 			<div class="nav-wrapper">
 				<a href="{{pathFor 'students'}}" class="brand-logo">
@@ -13,9 +13,9 @@
 					<li class="hoverable students food-n-drinks"><a class="food-n-drinks" href="{{pathFor 'students'}}">Food & Drink</a></li>
 					<li class="hoverable students study"><a class="study" href="{{pathFor 'students'}}">Study</a></li>
 					<li class="hoverable students services"><a class="services" href="{{pathFor 'students'}}">Services</a></li>
-					<li class="hoverable" id="accountsPortal"><a>{{> sulaVendors}}</a></li>
-					<li class="">{{>sulaSearch}}</li>
-					<li class="sign-up-li"><a class="btn red" href="{{pathFor 'signUp'}}">Sign Up</a></li>
+					<li class="hoverable students" id="accountsPortal"><a>{{> sulaVendors}}</a></li>
+					<!-- <li class="">{{>sulaSearch}}</li> -->
+					<li class="sign-up-li students"><a class="btn red" href="{{pathFor 'signUp'}}">Sign Up</a></li>
 				</ul>
 				<ul class="side-nav" id="mobile-nav">
 					<li id="sideNavLogo" align="center"><img src="/resources/site logo.png" alt="Sula Students"></li>

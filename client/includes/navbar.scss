@@ -21,11 +21,17 @@
     }
 
     .sign-up-li {
-        padding-left: 10px;
-        padding-right: 10px;
+        // padding-left: 10px;
+        // padding-right: 10px;
     }
 }
 
 nav .students {
-    margin-left:25px;
+    margin-left: 3%;
+}
+
+@media (max-width: 1235px) {
+    nav .students {
+        margin-left: 0.75%;
+    }
 }
