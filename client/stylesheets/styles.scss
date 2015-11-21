@@ -67,12 +67,12 @@
 /* newDiscount */
 
 .holder {
-    background: lightgrey;
-    width: 250px;
-    height: 250px;
-    line-height: 50px;
-    text-align: center;
-    font-weight: bold;
+	background: lightgrey;
+	width: 250px;
+	height: 250px;
+	line-height: 50px;
+	text-align: center;
+	font-weight: bold;
 	cursor: pointer;
 }
 
@@ -152,8 +152,8 @@
 
 #user {
 	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .start-vendor {
@@ -186,12 +186,12 @@
 }
 
 @media (max-width: 690px) {
-  .start-vendor {
-    margin-bottom: 1em;
-  }
-  .start-student {
-  	margin-bottom: 1em;
-  }
+	.start-vendor {
+		margin-bottom: 1em;
+	}
+	.start-student {
+		margin-bottom: 1em;
+	}
 }
 
 /* thumb */
@@ -211,9 +211,9 @@
 
 /* Class */
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -245,6 +245,10 @@
 	display: none;
 }
 
+.pointer {
+	cursor: pointer;
+}
+
 .sula-blue {
 	background-color: #0DC0FF;
 }
@@ -259,4 +263,16 @@
 
 .container {
 	width: 90%;
+}
+
+a {
+	color: rgb(255, 171, 64);
+}
+
+// canvas extra css to improve chart.js appearence
+
+canvas {
+	width: 100% !important;
+	max-width: 800px;
+	height: auto !important;
 }

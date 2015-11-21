@@ -33,7 +33,8 @@ Template.newDiscount.events({
 			// if (result.postExists) {
 			// 	throwError()
 			// }
-			Router.go('discounts');
+			Router.go('vendors');
+			return;
 		});
 
 	},

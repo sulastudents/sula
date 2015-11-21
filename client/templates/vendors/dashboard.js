@@ -1,3 +1,22 @@
+Template.vendorDiscounts.created = function () {
+    var instance = this;
+
+    var userId = Meteor.userId();
+
+    var subscription = instance.subscribe('vendorDiscounts', userId);
+
+    instance.discounts = function() {
+        return Discounts.find({});
+      }
+}
+
+Template.vendorDiscounts.helpers({
+    discounts: function () {
+        // console.log(this);
+        return Template.instance().discounts();
+    }
+});
+
 Template.dashboard.onRendered(function() {
   this.autorun(function () {
     if (GoogleMaps.loaded()) {
@@ -7,24 +26,7 @@ Template.dashboard.onRendered(function() {
 });
 
 Template.dashboard.helpers({
-	name: function () {
-		return Meteor.user().username;
-	},
-	number: function () {
-		return Meteor.user().profile.number;
-	},
-	email: function () {
-		return Meteor.user().emails[0].address;
-	},
-	website: function () {
-		return Meteor.user().profile.website;
-	},
-	address: function () {
-		return Meteor.user().profile.location;
-	},
-	description: function () {
-		return Meteor.user().profile.description;
-	},
+
 	discountCount: function () {
 		var userId = Meteor.userId();
 		return Discounts.find({authorId: userId}).count();
@@ -35,7 +37,10 @@ Template.dashboard.helpers({
 		} else {
 			return "background-image: url('"+Meteor.user().profile.logo+"');";
 		}
-	}
+	},
+    discounts: function () {
+        return Discounts.find().fetch();
+    }
 });
 
 Template.dashboard.events({
@@ -105,4 +110,140 @@ Template.dashboard.events({
         };
         encodeImageFileAsURL();
 	}
+});
+
+Template.accountCard.helpers({
+    vendor: function () {
+        var user = Meteor.user();
+
+        return {
+            username: user.username,
+            email: user.emails[0].address,
+            telephone: user.profile.number,
+            location: (user.profile.location !== "") ? user.profile.location:false,
+            website: (user.profile.website !== "") ? user.profile.website:false,
+            description: user.profile.description
+        }
+    }
+});
+
+Template.accountCard.events({
+    "click #accountAddLocation": function (event) {
+        event.preventDefault();
+        $('#accountAddLocationContainer').html('<input href="" id="accountEditLocation" placeholder="Add Location"> &nbsp <a class="waves-effect waves-light btn" id="dashboardAddLocation">Add</a>');
+        return;
+    },
+    "click #dashboardAddLocation": function (event) {
+        event.preventDefault();
+
+        var location = $('#accountEditLocation').val();
+
+        if (Meteor.users.update({_id: Meteor.userId()}, {$set: { "profile.location" : location }})) {
+            mToast("Success!");
+            return;
+        }
+    },
+    "click #accountAddWebsite": function (event) {
+        event.preventDefault();
+        $('#accountAddWebsiteContainer').html('<input href="" id="accountEditWebsite" placeholder="Add Website"> &nbsp <a class="waves-effect waves-light btn" id="dashboardAddWebsite">Add</a>');
+        return;
+    },
+    "click #dashboardAddWebsite": function (event) {
+        event.preventDefault();
+
+        var website = $('#accountEditWebsite').val();
+
+        if (Meteor.users.update({_id: Meteor.userId()}, {$set: { "profile.website" : website }})) {
+            mToast("Success!");
+            return;
+        }
+    },
+    "click #editAccount": function (event) {
+        event.preventDefault();
+
+        // mToast("coming soon!");
+        return;
+    }
+});
+
+
+Template.offersTrafficCard.created = function () {
+    var instance = this,
+        vendorId = Meteor.userId();
+
+    instance.autorun(function () {
+        var subscription = instance.subscribe("offersTrafficCard", vendorId);
+    });
+
+    instance.traffic = function () {
+        return Traffic.find({});
+    }
+};
+
+
+Template.offersTrafficCard.rendered = function () {
+    // Chart.defaults.global.responsive = true;
+
+    var ownerId = Meteor.userId();
+
+    Meteor.call("offersTrafficCardData", ownerId, function(error, result){
+        if(error){
+            console.log("error", error);
+            mToast("Sorry, there has been an erro rendering the chart.");
+            return;
+        }
+        if(result){
+            var data = {
+                labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                datasets: [
+                    {
+                        label: "My First dataset",
+                        fillColor: "rgba(220,220,220,0.2)",
+                        strokeColor: "rgba(220,220,220,1)",
+                        pointColor: "rgba(220,220,220,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(220,220,220,1)",
+                        data: result.impressionsData
+                        // data: [65, 59, 80, 81, 56, 55, 40, 60, 55, 80, 20, 83]
+                    },
+                    {
+                        label: "My Second dataset",
+                        fillColor: "rgba(151,187,205,0.2)",
+                        strokeColor: "rgba(151,187,205,1)",
+                        pointColor: "rgba(151,187,205,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        data: result.clicksData
+                        // data: [28, 48, 40, 19, 86, 27, 90, 71, 50, 80, 46, 53]
+                    }
+                ]
+            };
+
+            // console.log(data);
+
+            Chart.defaults.global.responsive = true;
+
+            var ctx = document.getElementById("offersTrafficChart").getContext("2d");
+            window.myLine = new Chart(ctx).Line(data, {});
+
+             return;
+        }
+    });
+
+}
+
+Template.offersTrafficCard.helpers({
+
+});
+
+
+Template.addDiscount.events({
+    'click #addDiscount': function (event) {
+        event.preventDefault();
+
+        Router.go('newDiscount');
+        return;
+    }
 });

@@ -38,3 +38,11 @@ Meteor.publish('admin', function (userId) {
 		Meteor.users.find({})
 	];
 });
+
+Meteor.publish("vendorDiscounts", function(vendorId){
+	return Discounts.find({authorId: vendorId});
+});
+
+Meteor.publish("offersTrafficCard", function(vendorId){
+	return Traffic.find({ownerId: vendorId});
+});

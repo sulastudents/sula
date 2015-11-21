@@ -1,43 +1,36 @@
 <template name="discount">
-
-
-
-		<li class="collection-item avatar">
-			<img src="{{image}}" alt="" class="circle">
-			<span class="title">{{title}}</span>
-			<p>{{description}} <br>
-
-			</p>
-			<a class="waves-effect waves-light red btn" id="delete"><i class="zmdi zmdi-delete"></i></a>
-			<a class="waves-effect waves-light green btn" id="edit"><i class="zmdi zmdi-edit"></i></a>
-		</li>
-
-
-
-
-	<!-- <div class="panel panel-default">
-		<div class="panel-body">
-			<div class="media">
-				<div class="media-left">
-					<a href="#">
-					<img class="media-object" width="100px" height="100px" src="{{image}}" alt="...">
-					</a>
-				</div>
-				<div class="media-body">
-					<h4 class="media-heading">{{title}}</h4>
+	<div class="col s12 m4">
+		<div class="card small">
+			<div class="card-image">
+				<img src="{{image}}">
+				<span class="card-title">{{title}}</span>
+			</div>
+			<div class="card-content">
+				<p>
 					{{description}}
-					<div class="pull-right"> -->
-						<!-- <a href="">
-							<button type="button" id="edit" class="btn btn-info">
-								<span class="glyphicon glyphicon-wrench"></span>
-							</button>
-						</a> -->
-						<!-- &nbsp; -->
-						<!-- <a class="waves-effect waves-light red btn" id="delete"><i class="zmdi zmdi-delete"></i>&nbsp; Delete</a> -->
-						<!-- <button type="button" id="delete" class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button> -->
-					<!-- </div>
-				</div>
+				</p>
+			</div>
+			<div class="card-action">
+				<!-- <a href="#">This is a link</a> -->
+				<a class="waves-effect waves-light red btn" id="delete"><i class="zmdi zmdi-delete"></i></a>
+				<a class="waves-effect waves-light green btn" id="edit"><i class="zmdi zmdi-edit"></i></a>
 			</div>
 		</div>
-	</div> -->
+	</div>
 </template>
+
+
+
+<!-- <template name="discount">
+
+<li class="collection-item avatar">
+<img src="{{image}}" alt="" class="circle">
+<span class="title">{{title}}</span>
+<p>{{description}} <br>
+
+</p>
+<a class="waves-effect waves-light red btn" id="delete"><i class="zmdi zmdi-delete"></i></a>
+<a class="waves-effect waves-light green btn" id="edit"><i class="zmdi zmdi-edit"></i></a>
+</li>
+
+</template> -->
