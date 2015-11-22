@@ -18,7 +18,7 @@ Template.thumb.rendered = function () {
 			}
 		});
 
-	},1000);
+	},2000);
 };
 
 

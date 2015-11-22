@@ -124,6 +124,9 @@ Template.accountCard.helpers({
             website: (user.profile.website !== "") ? user.profile.website:false,
             description: user.profile.description
         }
+    },
+    editAccount: function () {
+        return Session.get("editAccount") || false;
     }
 });
 
@@ -161,8 +164,41 @@ Template.accountCard.events({
     "click #editAccount": function (event) {
         event.preventDefault();
 
-        // mToast("coming soon!");
+        Session.set("editAccount", true);
+
+        mToast("Edit your Account.");
         return;
+    },
+    "click #cancelEditAccount": function (event) {
+        event.preventDefault();
+        Session.set("editAccount", false);
+        mToast("Cancelled.");
+        return;
+    },
+    "click #saveAccountChanges": function (event) {
+        event.preventDefault();
+
+        var edits = {
+            email: $("#editAccountEmail").val(),
+            telephone: $("#editAccountTelephone").val(),
+            location: $("#editAccountLocation").val(),
+            website: $("#editAccountWebsite").val(),
+            description: $("#editAccountDescription").val()
+        }
+
+        Meteor.call("updateUserAccount", edits, function(error, result){
+            if(error){
+                mToast("Something went wrong! Try again.");
+                return;
+            }
+            if(result){
+                 mToast(result);
+                 Session.set("editAccount", false);
+                 return;
+            }
+        });
+
+        console.log(edits);
     }
 });
 

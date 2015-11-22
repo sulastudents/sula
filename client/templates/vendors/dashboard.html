@@ -27,47 +27,104 @@
 					<img id="editLogo" src="resources/site logo.png">
 					<span class="card-title">{{vendor.username}}'s Account</span>
 				</div>
+				{{#with vendor}}
 				<div class="card-content">
-					<p>
-						Email: {{vendor.email}}
-					</p>
-					<p>
-						Telephone: {{vendor.telephone}}
-					</p>
-					<p>
-						<span>Location</span>: <span>
-							{{#if vendor.location}}
-							{{vendor.location}}
-							{{else}}
-							<div id="accountAddLocationContainer">
-								<a href="" id="accountAddLocation">Add Location</a>
-							</div>
-							{{/if}}
-						</span>
-					</p>
-					<p>
-						<span>Website</span>: <span>
-							{{#if vendor.website}}
-								<a href="{{vendor.website}}" target="_blank">
-									{{vendor.website}}
-								</a>
-							{{else}}
-							<div id="accountAddWebsiteContainer">
-								<a href="" id="accountAddWebsite">Add Website</a>
-							</div>
-							{{/if}}
-						</span>
-					</p>
-					<p>
-						{{vendor.description}}
-					</p>
+					{{#unless editAccount}}
+						<!-- {{#with vendor}} -->
+						 {{> accountCardDetails}}
+						<!-- {{/with}} -->
+					{{else}}
+						{{> editAccountCard}}
+					{{/unless}}
 				</div>
 				<div class="card-action">
-					<a href="#" id="editAccount">Edit Account</a>
+					{{#unless editAccount}}
+						<a href="#" id="editAccount">Edit Account</a>
+					{{else}}
+						<a href="#" id="saveAccountChanges">Save Changes</a>
+						<a href="#" class="right" id="cancelEditAccount">Cancel</a>
+					{{/unless}}
 				</div>
+				{{/with}}
 			</div>
 		<!-- </div> -->
 	</div>
+</template>
+
+<template name="accountCardDetails">
+	<p>
+		Email: {{email}}
+	</p>
+	<p>
+		Telephone: {{telephone}}
+	</p>
+	<p>
+		<span>Location</span>: <span>
+			{{#if location}}
+			{{location}}
+			{{else}}
+			<div id="accountAddLocationContainer">
+				<a href="" id="accountAddLocation">Add Location</a>
+			</div>
+			{{/if}}
+		</span>
+	</p>
+	<p>
+		<span>Website</span>: <span>
+			{{#if website}}
+				<a href="{{website}}" target="_blank">
+					{{website}}
+				</a>
+			{{else}}
+			<div id="accountAddWebsiteContainer">
+				<a href="" id="accountAddWebsite">Add Website</a>
+			</div>
+			{{/if}}
+		</span>
+	</p>
+	<p>
+		{{description}}
+	</p>
+</template>
+
+<template name="editAccountCard">
+	<p>
+		Email: <input class="inline" id="editAccountEmail" value="{{email}}" type="text">
+	</p>
+	<p>
+		Telephone: <input class="inline" id="editAccountTelephone" value="{{telephone}}" type="text">
+	</p>
+	<p>
+		Location: <input value="{{location}}" id="editAccountLocation" type="text">
+		<!-- <span>Location</span>:  -->
+		<!-- <span>
+			{{#if location}}
+			{{location}}
+			{{else}}
+			<div id="accountAddLocationContainer">
+				<a href="" id="accountAddLocation">Add Location</a>
+			</div>
+			{{/if}}
+		</span> -->
+	</p>
+	<p>
+		Website: <input value="{{website}}" id="editAccountWebsite" type="text">
+		<!-- <span>Website</span>: <span>
+			{{#if website}}
+				<a href="{{website}}" target="_blank">
+					{{website}}
+				</a>
+			{{else}}
+			<div id="accountAddWebsiteContainer">
+				<a href="" id="accountAddWebsite">Add Website</a>
+			</div>
+			{{/if}}
+		</span> -->
+	</p>
+	<p>
+		Description: <input value="{{description}}" id="editAccountDescription" type="text">
+		<!-- {{description}} -->
+	</p>
 </template>
 
 <template name="offersTrafficCard">
