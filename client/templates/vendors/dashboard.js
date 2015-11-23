@@ -13,6 +13,7 @@ Template.vendorDiscounts.created = function () {
 Template.vendorDiscounts.helpers({
     discounts: function () {
         // console.log(this);
+        mToast("discounts called!");
         return Template.instance().discounts();
     }
 });
@@ -207,9 +208,9 @@ Template.offersTrafficCard.created = function () {
     var instance = this,
         vendorId = Meteor.userId();
 
-    instance.autorun(function () {
+    // instance.autorun(function () {
         var subscription = instance.subscribe("offersTrafficCard", vendorId);
-    });
+    // });
 
     instance.traffic = function () {
         return Traffic.find({});
@@ -225,7 +226,7 @@ Template.offersTrafficCard.rendered = function () {
     Meteor.call("offersTrafficCardData", ownerId, function(error, result){
         if(error){
             console.log("error", error);
-            mToast("Sorry, there has been an erro rendering the chart.");
+            mToast("Sorry, there has been an error rendering the chart.");
             return;
         }
         if(result){

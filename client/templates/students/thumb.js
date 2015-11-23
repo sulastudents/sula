@@ -2,9 +2,9 @@
 // Meteor.call("recordImpression", Meteor.userId(), function (error, result) { if (error) {console.log(eror)} if (result) { console.log(result)} });
 // Meteor.call("recordClick", Meteor.userId(), function (error, result) { if (error) {console.log(eror)} if (result) { console.log(result)} });
 
-Template.thumb.rendered = function () {
+Template.thumb.created = function () {
 	var that = this;
-	setTimeout(function () {
+	// setTimeout(function () {
 		console.log(that.data.authorId);
 
 		// record impression of offer
@@ -13,12 +13,12 @@ Template.thumb.rendered = function () {
 				console.log(eror);
 
 			} if (result) {
-				mToast("impression");
+				// mToast("impression");
 				// console.log(result);
 			}
 		});
 
-	},2000);
+	// },2000);
 };
 
 
@@ -39,7 +39,7 @@ Template.thumb.events({
 			if (error) {
 				console.log(eror)
 			} if (result) {
-				mToast("click");
+				// mToast("click");
 				// console.log(result)
 			}
 		});

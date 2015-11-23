@@ -163,3 +163,18 @@ Template.sulaVendors.rendered = function(e){
 	    }
 	  );
 };
+
+Accounts.onLogin(function(){
+	 Meteor.call("validateTrafficCollection", Meteor.userId(), function(error, result){
+	 	if(error){
+	 		console.log("error", error);
+			mToast("Something went wrong!");
+			return;
+	 	}
+	 	if(result){
+	 		 mToast("New Traffic Collection");
+			 return;
+	 	}
+	 });
+	 return;
+});
