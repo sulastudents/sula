@@ -13,7 +13,7 @@ Template.vendorDiscounts.created = function () {
 Template.vendorDiscounts.helpers({
     discounts: function () {
         // console.log(this);
-        mToast("discounts called!");
+        // mToast("discounts called!");
         return Template.instance().discounts();
     }
 });
