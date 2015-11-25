@@ -12,8 +12,6 @@ Template.vendorDiscounts.created = function () {
 
 Template.vendorDiscounts.helpers({
     discounts: function () {
-        // console.log(this);
-        // mToast("discounts called!");
         return Template.instance().discounts();
     }
 });
@@ -66,18 +64,6 @@ Template.dashboard.events({
 				console.log(error);
 			}
 		});
-
-		// Meteor.users.update({_id: Meteor.userId()}, {$set: {
-		// 	username: userInfo.username,
-		// 	email: userInfo.email,
-		// 	profile: {
-		// 		logo: userInfo.logo,
-		// 		website: userInfo.website,
-		// 		location: userInfo.address,
-		// 		number: userInfo.number,
-		// 		description: userInfo.description
-		// 	}
-		// } });
 	},
 	'click .editLogo': function () {
 		document.getElementById('logoInput').click();
@@ -94,13 +80,6 @@ Template.dashboard.events({
 
                 fileReader.onload = function(fileLoadedEvent) {
                     var srcData = fileLoadedEvent.target.result; // <--- data: base64
-
-                    // var newImage = document.createElement('img');
-                    // newImage.src = srcData;
-
-                    // document.getElementById("imgTest").innerHTML = newImage.outerHTML;
-                    // alert("Converted Base64 version is "+document.getElementById("imgTest").innerHTML);
-                    // console.log(srcData);
                     $('#dashboardLogo').css('background-image', 'url('+srcData+')');
                     Session.set('logo', srcData);
                     return srcData;
