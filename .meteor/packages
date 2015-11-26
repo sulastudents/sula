@@ -36,3 +36,4 @@ cfs:standard-packages
 react-template-helper
 materialize:materialize
 chart:chart
+tomi:upload-jquery
