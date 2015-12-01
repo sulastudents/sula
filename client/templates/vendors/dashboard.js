@@ -237,7 +237,7 @@ Template.offersTrafficCard.rendered = function () {
                 ]
             };
 
-            // console.log(data);
+            console.log(result);
 
             Chart.defaults.global.responsive = true;
 
