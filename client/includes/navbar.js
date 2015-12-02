@@ -1,6 +1,7 @@
 Template.navbar.events({
 	'click #sideNavLogo': function () {
 		$('.button-collapse').sideNav('hide');
+		Session.set('category', 'deals');
 		Router.go('students');
 	},
 	'click .sideNavItem': function (e) {
@@ -28,9 +29,10 @@ Template.navbar.events({
 	// 'click #home': function () {
 	// 	return Router.go('students');
 	// },
-	// 'click .brand': function () {
-	// 	return Router.go('home');
-	// },
+	'click .brand-logo': function () {
+		Session.set('category', 'deals');
+		return Router.go('home');
+	},
 	'submit .search': function (e) {
 		e.preventDefault();
 

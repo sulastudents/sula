@@ -25,6 +25,7 @@ Template.footer.events({
         // return;
     },
     'click #footer-logo': function () {
+        Session.set('category', 'deals');
         Router.go('students');
         return;
     }
