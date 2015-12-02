@@ -36,3 +36,5 @@ react-template-helper
 materialize:materialize
 chart:chart
 tomi:upload-jquery
+tomi:upload-server
+okgrow:analytics

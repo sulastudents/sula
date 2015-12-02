@@ -1,61 +1,19 @@
-// new traffic collection created with every new user
-// Accounts.onCreateUser(function(options) {
-//     var user = Meteor.userId();
-//
-//     var trafficId = Traffic.insert({
-//         ownerId: user,
-//         traffic: {
-//             january: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             february: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             march: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             april: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             may: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             june: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             july: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             august: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             september: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             october: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             november: {
-//                 clicks: 0,
-//                 impressions: 0
-//             },
-//             december: {
-//                 clicks: 0,
-//                 impressions: 0
-//             }
-//         },
-//         created: new Date()
+// Meteor.startup(function(){
+//     UploadServer.init(function () {
+//         tmpDir: process.env.PWD + '/.uploads/tmp',
+//         uploadDir: process.env.PWD + '/.uploads/',
+//         checkCreateDirectories: true //create the directories for you
 //     });
-//
-//     return trafficId;
 // });
+
+// Google Analytics Code
+// <script>
+//   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+//   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+//   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+//   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+//
+//   ga('create', 'UA-70937010-1', 'auto');
+//   ga('send', 'pageview');
+//
+// </script>
