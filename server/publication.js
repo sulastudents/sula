@@ -4,6 +4,7 @@
 
 Meteor.publish('discounts', function (category, limit) {
 	if (category === "deals") {
+		// Meteor._sleepForMs(2000);
 		return Discounts.find({}, {limit: limit});
 	} else {
 		return Discounts.find({category: category}, {limit: limit});
