@@ -64,5 +64,22 @@ Template.offer.helpers({
 
     isDEALS: function () {
         return Session.equals('category', 'deals');
+    },
+    noDiscounts: function () {
+        return !Template.instance().offers().count();
+    },
+    category: function () {
+        var cat = Session.get('category');
+        if (cat === 'entertainment') {
+            return 'Entertainment';
+        } else if (cat === 'foodNDrinks') {
+            return 'Food and Drinks';
+        } else if (cat === 'shopping') {
+            return 'Shopping';
+        } else if (cat === 'study') {
+            return 'Study';
+        } else if (cat === 'services') {
+            return 'Services';
+        }
     }
 });

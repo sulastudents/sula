@@ -12,25 +12,31 @@
                     </h5>
                     {{/if}}
                 </div>
+                {{#unless noDiscounts}}
+                    {{#each offer}}
+                        {{> thumb}}
+                    {{/each}}
 
-                {{#each offer}}
-                {{> thumb}}
-                {{/each}}
-
-                {{#if Template.subscriptionsReady}}
-                    {{#if hasMoreOffers}}
-                    <div class="col s12" align="center">
-                        <a class="load-more btn" href="#">More Discounts</a>
-                    </div>
+                    {{#if Template.subscriptionsReady}}
+                        {{#if hasMoreOffers}}
+                        <div class="col s12" align="center">
+                            <a class="load-more btn" href="#">More Discounts</a>
+                        </div>
+                        {{/if}}
+                    {{else}}
+                        <div class="row">
+                            <div class="loading col s12" align="center">
+                                <!-- {{>spinner}} -->
+                                {{> loading}}
+                            </div>
+                        </div>
                     {{/if}}
                 {{else}}
-                    <div class="row">
-                        <div class="loading col s12" align="center">
-                            <!-- {{>spinner}} -->
-                            {{> loading}}
-                        </div>
-                    </div>
-                {{/if}}
+                    <h4>
+                        OOPS! There are no discounts in the {{category}} category yet... Check back soon!
+                    </h4>
+                    <small class="blue-text" align="center">But we still love you though!</small>
+                {{/unless}}
             </div>
 
             <div id="sideBannerContainer" class="col m3 hide-on-small-only">
