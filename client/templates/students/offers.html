@@ -10,6 +10,10 @@
                     <h5 id="hottestDealsTitle">
                         Hottest Deals!
                     </h5>
+                    {{else}}
+                    <h5 id="hottestDealsTitle">
+                        {{category}}
+                    </h5>
                     {{/if}}
                 </div>
                 {{#unless noDiscounts}}
