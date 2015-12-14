@@ -16,12 +16,18 @@
                     </h5>
                     {{/if}}
                 </div>
-                {{#unless noDiscounts}}
+                <!-- {{#unless noDiscounts}} -->
                     {{#each offer}}
                         {{> thumb}}
                     {{/each}}
 
                     {{#if Template.subscriptionsReady}}
+                    {{#unless noDiscounts}}
+                    <h4>
+                        OOPS! There are no discounts in the {{category}} category yet... Check back soon!
+                    </h4>
+                    <small class="blue-text" align="center">But we still love you though!</small>
+                    {{/unless}}
                         {{#if hasMoreOffers}}
                         <div class="col s12" align="center">
                             <a class="load-more btn" href="#">More Discounts</a>
@@ -35,12 +41,12 @@
                             </div>
                         </div>
                     {{/if}}
-                {{else}}
+                <!-- {{else}}
                     <h4>
                         OOPS! There are no discounts in the {{category}} category yet... Check back soon!
                     </h4>
                     <small class="blue-text" align="center">But we still love you though!</small>
-                {{/unless}}
+                {{/unless}} -->
             </div>
 
             <div id="sideBannerContainer" class="col m3 hide-on-small-only">

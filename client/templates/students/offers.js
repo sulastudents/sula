@@ -66,7 +66,7 @@ Template.offer.helpers({
         return Session.equals('category', 'deals');
     },
     noDiscounts: function () {
-        return !Template.instance().offers().count();
+        return Template.instance().offers().count();
     },
     category: function () {
         var cat = Session.get('category');
